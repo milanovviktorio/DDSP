@@ -31,28 +31,50 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity testSISO is
+entity testbenchPIPO is
 --  Port ( );
-end testSISO;
+end testbenchPIPO;
 
-architecture Behavioral of testSISO is
-component SISO is
-    Port ( D : in STD_LOGIC;
-           Q : out STD_LOGIC;
-           RST : in STD_LOGIC;
-           clk : in STD_LOGIC);
+architecture Structural of testbenchPIPO is
+component PIPO is
+    Port ( DA : in STD_LOGIC_VECTOR (7 downto 0);
+           DB : in STD_LOGIC_VECTOR (7 downto 0);
+           DC : in STD_LOGIC_VECTOR (7 downto 0);
+           DD : in STD_LOGIC_VECTOR (7 downto 0);
+           QA : out STD_LOGIC_VECTOR (7 downto 0);
+           QB : out STD_LOGIC_VECTOR (7 downto 0);
+           QC : out STD_LOGIC_VECTOR (7 downto 0);
+           QD : out STD_LOGIC_VECTOR (7 downto 0);
+               RST : in STD_LOGIC;
+               clk : in STD_LOGIC);
 end component;
 
-signal D: STD_LOGIC;
-signal Q: STD_LOGIC;
-signal RST: STD_LOGIC;
-signal clk: STD_LOGIC;
-
+    signal DA   : STD_LOGIC_VECTOR (7 downto 0);
+    signal DB   : STD_LOGIC_VECTOR (7 downto 0);
+    signal DC   : STD_LOGIC_VECTOR (7 downto 0);
+    signal DD   : STD_LOGIC_VECTOR (7 downto 0);
+    signal QA   : STD_LOGIC_VECTOR (7 downto 0);
+    signal QB   : STD_LOGIC_VECTOR (7 downto 0);
+    signal QC   : STD_LOGIC_VECTOR (7 downto 0);
+    signal QD   : STD_LOGIC_VECTOR (7 downto 0);
+    signal RST     : STD_LOGIC;
+    signal clk    : STD_LOGIC;
+     
 constant clk_period : time := 50ns;
 
 begin
-    uut: SISO Port map
-    (D=>D,Q=>Q,RST=>RST,clk=>clk);
+    uut: PIPO
+          port map(
+          DA     => DA,
+          DB     => DB,
+          DC     => DC,
+          DD     => DD,
+          QA     => QA,
+          QB     => QB,
+          QC     => QC,
+          QD     => QD,
+          RST      => RST,
+          clk       => clk);
     clk_process: process
         Begin
         clk <= '0';
@@ -66,9 +88,15 @@ begin
         wait for 90 ns;
         RST <= '0';
         wait for 220 ns;
-        D <= '0';
-        wait for 10 ns;
-        D <= '1';
+        DA <= "00001111";
+        DB <= "10101010";
+        DC <= "00111100";
+        DD <= "11111111";
+        wait for 50 ns;
+        DB <= "00001111";
+        DC <= "10101010";
+        DD <= "00111100";
+        DA <= "11111111";
         wait for 80 ns;
     end process;
-end Behavioral;
+end Structural;

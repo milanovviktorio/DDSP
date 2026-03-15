@@ -31,28 +31,61 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity SISO is
-Port ( D : in STD_LOGIC;
-           Q : out STD_LOGIC;
+entity PIPO is
+Port ( DA : in STD_LOGIC_VECTOR (7 downto 0);
+       DB : in STD_LOGIC_VECTOR (7 downto 0);
+       DC : in STD_LOGIC_VECTOR (7 downto 0);
+       DD : in STD_LOGIC_VECTOR (7 downto 0);
+       QA : out STD_LOGIC_VECTOR (7 downto 0);
+       QB : out STD_LOGIC_VECTOR (7 downto 0);
+       QC : out STD_LOGIC_VECTOR (7 downto 0);
+       QD : out STD_LOGIC_VECTOR (7 downto 0);
            RST : in STD_LOGIC;
            clk : in STD_LOGIC);
-end SISO;
+end PIPO;
 
-architecture Behavioral of SISO is
+architecture Structural of PIPO is
 
-signal internalBit : STD_LOGIC_VECTOR (3 downto 0);
+component A
+Port ( 
+       D   : in  STD_LOGIC_VECTOR (7 downto 0);
+       Q   : out STD_LOGIC_VECTOR (7 downto 0);
+       RST : in  STD_LOGIC;
+       clk : in  STD_LOGIC
+     );
+end component;
+
+component B
+Port ( 
+       D   : in  STD_LOGIC_VECTOR (7 downto 0);
+       Q   : out STD_LOGIC_VECTOR (7 downto 0);
+       RST : in  STD_LOGIC;
+       clk : in  STD_LOGIC
+     );
+end component;
+
+component C
+Port ( 
+       D   : in  STD_LOGIC_VECTOR (7 downto 0);
+       Q   : out STD_LOGIC_VECTOR (7 downto 0);
+       RST : in  STD_LOGIC;
+       clk : in  STD_LOGIC
+     );
+end component;
+
+component D
+Port ( 
+       D   : in  STD_LOGIC_VECTOR (7 downto 0);
+       Q   : out STD_LOGIC_VECTOR (7 downto 0);
+       RST : in  STD_LOGIC;
+       clk : in  STD_LOGIC
+     );
+end component;
 
 begin
-process(clk,rst)
-    begin
-    if RST='1'
-        then internalBit <= (others => '0');
-    elsif rising_edge(clk) then
-    for i in 0 to 2 loop 
-    internalBit(i+1) <= internalBit(i); 
-    end loop; 
-    end if; 
-    internalBit(0) <= D;
-end process;
-Q <= internalBit(3);
-end Behavioral;
+u1: A port map(D=>DA,Q=>QA,RST=>RST,clk=>clk);
+u2: B port map(D=>DB,Q=>QB,RST=>RST,clk=>clk);
+u3: C port map(D=>DC,Q=>QC,RST=>RST,clk=>clk);
+u4: D port map(D=>DD,Q=>QD,RST=>RST,clk=>clk);
+
+end Structural;

@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'A'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'B'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'C'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'D'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PIPO'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sim_1/new/testbenchPIPO.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'testbenchPIPO'
