@@ -36,7 +36,8 @@ Port (
        D   : in  STD_LOGIC_VECTOR (7 downto 0);
        Q   : out STD_LOGIC_VECTOR (7 downto 0);
        RST : in  STD_LOGIC;
-       clk : in  STD_LOGIC
+       clk : in  STD_LOGIC;
+       LOAD : in STD_LOGIC
      );
 end A;
 
@@ -52,7 +53,9 @@ begin
         internalBit <= (others => '0');
         
     elsif rising_edge(clk) then
+        if LOAD='1' then
         internalBit <= D;  
+        end if;
     end if;
 end process;
 
