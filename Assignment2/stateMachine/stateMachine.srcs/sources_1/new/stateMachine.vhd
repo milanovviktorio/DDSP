@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 03/17/2026 11:25:57 AM
 -- Design Name: 
--- Module Name: stateMachine - Structural
+-- Module Name: stateMachine - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -34,61 +34,106 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity stateMachine is
     Port ( clk  : in  STD_LOGIC;
            Reset : in STD_LOGIC;
-           
-           Sel_data_A : out STD_LOGIC_VECTOR(1 downto 0);
-           Sel_data_B : out STD_LOGIC_VECTOR(1 downto 0);
-           Sel_data_ALU : out STD_LOGIC_VECTOR(1 downto 0);
-           
-           Sel_data : out STD_LOGIC;
-           
-           Data_in_1: in STD_LOGIC_VECTOR(7 downto 0);
-           Data_in_2: in STD_LOGIC_VECTOR(7 downto 0)
+           SelInput : out STD_LOGIC;
+           AluFunc : out STD_LOGIC_VECTOR (1 downto 0);
+           LoadA : out STD_LOGIC;
+           LoadB : out STD_LOGIC;
+           LoadC : out STD_LOGIC;
+           LoadD : out STD_LOGIC;
+           SelA : out STD_LOGIC_VECTOR (1 downto 0);
+           SelB : out STD_LOGIC_VECTOR (1 downto 0);
+           Carry : out STD_LOGIC;
+           Stateout : out STD_LOGIC_VECTOR(3 downto 0);
+           PC_extra : out STD_LOGIC_VECTOR (3 downto 0);
+           ASM_input_extra : out STD_LOGIC_VECTOR (3 downto 0);
     );
 end stateMachine;
 
-architecture Structural of stateMachine is
+architecture Behavioral of stateMachine is
+    type state_type is (st1_reset, st2_DecodeAndExecute, st3_Wait, st4_Execute, st5_Wait);
+    
+    signal state, next_state : state_type;
 
-component Datapath
-Port(
-    CarryIn   : in STD_LOGIC;
-    clk       : in STD_LOGIC;
-    Reset     : in STD_LOGIC;
-
-    input     : in STD_LOGIC_VECTOR(7 downto 0);
-
-    loadA     : in STD_LOGIC;
-    loadB     : in STD_LOGIC;
-    loadC     : in STD_LOGIC;
-    loadD     : in STD_LOGIC;
-
-    Sel_A     : in STD_LOGIC_VECTOR(1 downto 0);
-    Sel_B     : in STD_LOGIC_VECTOR(1 downto 0);
-    Sel_Alu   : in STD_LOGIC_VECTOR(1 downto 0);
-
-    Sel_input : in STD_LOGIC;
-
-    Out1      : out STD_LOGIC_VECTOR(7 downto 0);
-    Out2      : out STD_LOGIC_VECTOR(7 downto 0);
-
-    CarryOut  : out STD_LOGIC
-);
-end component;
-
-component counter
-Port ( clk   : in  STD_LOGIC;
-           Reset : in  STD_LOGIC;
-           Input : in  STD_LOGIC;  -- Up/Down control: '1' = up, '0' = down
-           q0    : out STD_LOGIC;
-           q1    : out STD_LOGIC;
-           q2    : out STD_LOGIC;
-           q3    : out STD_LOGIC;
-           q4    : out STD_LOGIC;
-           q5    : out STD_LOGIC;
-           q6    : out STD_LOGIC;
-           q7    : out STD_LOGIC);
-end component;
-
+    signal ASM_input : STD_LOGIC_VECTOR (3 downto 0);
+    signal PC : STD_LOGIC_VECTOR (3 downto 0);
+    signal Increment_PC : STD_LOGIC;
 begin
 
+SYNC_PROC: process (clk)
+    begin
+        if(falling_edge(clk)) then
+            if (reset = '1') then
+                state <= st1_reset;
+            else
+                state <= next_state;
+            end if;
+        end if;
+    end process;
 
-end Structural;
+Inst_decode: process (state, ASM_input)
+    begin
+        if(state=st1_reset) then
+            SelInput <= '0';
+            LoadA <= '0';
+            LoadB <= '0';
+            LoadC <= '0';
+            LoadD <= '0';
+            SelA <= "00";
+            SelB <= "00";
+            AluFunc <= "00";
+            Carry <= '0';
+            Increment_PC <= '0';
+            stateout <= "0001";
+        end if;
+
+        if (state = st2_DecodeAndExecute) then
+            case ASM_input is
+                when "0000" => -- Load A
+                        SelInput <= '1';
+                        LoadA <= '0';
+                        LoadB <= '0';
+                        LoadC <= '0';
+                        LoadD <= '0';
+                        SelA <= "00";
+                        SelB <= "01";
+                        AluFunc <= "00";
+                        Carry <= '0';
+                        Increment_PC <= '1';
+                        stateout <= "0010";                    
+            end case;
+        end if;
+        
+        if(state=st1_reset) then
+            SelInput <= '0';
+            LoadA <= '0';
+            LoadB <= '0';
+            LoadC <= '0';
+            LoadD <= '0';
+            SelA <= "00";
+            SelB <= "00";
+            AluFunc <= "00";
+            Carry <= '0';
+            Increment_PC <= '0';
+            stateout <= "0001";
+        end if;
+        
+        if(state=st4_Execute) then
+            if
+            end if;
+        end if;
+        
+        if(state=st1_reset) then
+            SelInput <= '0';
+            LoadA <= '0';
+            LoadB <= '0';
+            LoadC <= '0';
+            LoadD <= '0';
+            SelA <= "00";
+            SelB <= "00";
+            AluFunc <= "00";
+            Carry <= '0';
+            Increment_PC <= '0';
+            stateout <= "1011";
+        end if;
+
+end Behavioral;
