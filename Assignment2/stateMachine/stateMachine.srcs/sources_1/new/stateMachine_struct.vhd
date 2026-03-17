@@ -32,10 +32,29 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity stateMachine_struct is
---  Port ( );
+    --Port ();
 end stateMachine_struct;
 
 architecture Structural of stateMachine_struct is
+
+signal PC_clk : STD_LOGIC;
+
+Component stateMachine
+    Port ( clk  : in  STD_LOGIC;
+           Reset : in STD_LOGIC;
+           SelInput : out STD_LOGIC;
+           AluFunc : out STD_LOGIC_VECTOR (1 downto 0);
+           LoadA : out STD_LOGIC;
+           LoadB : out STD_LOGIC;
+           LoadC : out STD_LOGIC;
+           LoadD : out STD_LOGIC;
+           SelA : out STD_LOGIC_VECTOR (1 downto 0);
+           SelB : out STD_LOGIC_VECTOR (1 downto 0);
+           Carry : out STD_LOGIC;
+           Stateout : out STD_LOGIC_VECTOR(3 downto 0);
+           PC_extra : out STD_LOGIC_VECTOR (3 downto 0);
+           ASM_input_extra : out STD_LOGIC_VECTOR (3 downto 0));
+end component;
 
 Component counter
     Port ( clk   : in  STD_LOGIC;
@@ -52,10 +71,5 @@ Component counter
 end component;
 
 begin
-uProgramCounter: ProgramCounter
-port map (
-    PC_clk => clk;
-    Reset => reset;
-    Increment_PC => Input;
 
 end Structural;

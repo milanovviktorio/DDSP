@@ -45,7 +45,7 @@ entity stateMachine is
            Carry : out STD_LOGIC;
            Stateout : out STD_LOGIC_VECTOR(3 downto 0);
            PC_extra : out STD_LOGIC_VECTOR (3 downto 0);
-           ASM_input_extra : out STD_LOGIC_VECTOR (3 downto 0);
+           ASM_input_extra : out STD_LOGIC_VECTOR (3 downto 0)
     );
 end stateMachine;
 
@@ -103,7 +103,7 @@ Inst_decode: process (state, ASM_input)
             end case;
         end if;
         
-        if(state=st1_reset) then
+        if(state=st3_Wait) then
             SelInput <= '0';
             LoadA <= '0';
             LoadB <= '0';
@@ -122,7 +122,7 @@ Inst_decode: process (state, ASM_input)
             end if;
         end if;
         
-        if(state=st1_reset) then
+        if(state=st5_reset) then
             SelInput <= '0';
             LoadA <= '0';
             LoadB <= '0';
