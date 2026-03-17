@@ -1,0 +1,12 @@
+(0000)  0000 - load A
+	0001 - load B
+	0010 - load C
+	0011 - load D
+	0100 - A=A+A
+	0101 - A=B+C
+	0110 - OR A B
+	0111 - AND A B
+	1000 - NOT A
+	1001 - JUMP A
+	1010 - HLT
+	1011 - SUB A=B-C

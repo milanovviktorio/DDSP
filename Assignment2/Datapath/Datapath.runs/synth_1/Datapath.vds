@@ -3,28 +3,28 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Mar 16 18:22:14 2026
-# Process ID         : 24584
-# Current directory  : C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.runs/synth_1
+# Start of session at: Tue Mar 17 11:16:41 2026
+# Process ID         : 18644
+# Current directory  : C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.runs/synth_1
 # Command line       : vivado.exe -log Datapath.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Datapath.tcl
-# Log file           : C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.runs/synth_1/Datapath.vds
-# Journal file       : C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.runs/synth_1\vivado.jou
-# Running On         : DESKTOP-QU8QVCL
+# Log file           : C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.runs/synth_1/Datapath.vds
+# Journal file       : C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.runs/synth_1\vivado.jou
+# Running On         : JoniDeLaMircesti
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26200
-# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13705H
-# CPU Frequency      : 2918 MHz
-# CPU Physical cores : 14
-# CPU Logical cores  : 20
-# Host memory        : 34086 MB
+# Processor Detail   : AMD Ryzen 7 7840HS with Radeon 780M Graphics   
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33492 MB
 # Swap memory        : 2147 MB
-# Total Virtual      : 36234 MB
-# Available Virtual  : 13986 MB
+# Total Virtual      : 35639 MB
+# Available Virtual  : 19721 MB
 #-----------------------------------------------------------
 source Datapath.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 526.121 ; gain = 217.684
-Command: read_checkpoint -auto_incremental -incremental {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/utils_1/imports/synth_1/ALU.dcp}
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/utils_1/imports/synth_1/ALU.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 538.602 ; gain = 220.027
+Command: read_checkpoint -auto_incremental -incremental C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/utils_1/imports/synth_1/ALU.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/utils_1/imports/synth_1/ALU.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top Datapath -part xc7z020clg484-1
 Starting synth_design
@@ -34,58 +34,58 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 44284
+INFO: [Synth 8-7075] Helper process launched with PID 25552
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1072.066 ; gain = 533.070
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1082.867 ; gain = 530.914
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Datapath' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:53]
-INFO: [Synth 8-226] default block is never used [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:108]
-INFO: [Synth 8-226] default block is never used [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:121]
-INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:34' bound to instance 'uALU' of component 'ALU' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:143]
-INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:43]
-INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/adder.vhd:34' bound to instance 'u1' of component 'adder' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:76]
-INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/adder.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'adder' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/adder.vhd:42]
-INFO: [Synth 8-3491] module 'logic' declared at 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/logic.vhd:34' bound to instance 'u2' of component 'logic' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:77]
-INFO: [Synth 8-638] synthesizing module 'logic' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/logic.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'logic' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/logic.vhd:42]
-INFO: [Synth 8-3491] module 'mux' declared at 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:34' bound to instance 'u3' of component 'mux' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:78]
-INFO: [Synth 8-638] synthesizing module 'mux' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:43]
-INFO: [Synth 8-226] default block is never used [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'mux' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:43]
-INFO: [Synth 8-3491] module 'PIPO' declared at 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:24' bound to instance 'uREG' of component 'PIPO' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:159]
-INFO: [Synth 8-638] synthesizing module 'PIPO' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:48]
-INFO: [Synth 8-3491] module 'A' declared at 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd:34' bound to instance 'uA' of component 'A' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'A' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'A' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd:44]
-INFO: [Synth 8-3491] module 'B' declared at 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd:34' bound to instance 'uB' of component 'B' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'B' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'B' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd:44]
-INFO: [Synth 8-3491] module 'C' declared at 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd:34' bound to instance 'uC' of component 'C' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:102]
-INFO: [Synth 8-638] synthesizing module 'C' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'C' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd:44]
-INFO: [Synth 8-3491] module 'D' declared at 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd:34' bound to instance 'uD' of component 'D' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:104]
-INFO: [Synth 8-638] synthesizing module 'D' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'D' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'PIPO' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'Datapath' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'Datapath' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:53]
+INFO: [Synth 8-226] default block is never used [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:108]
+INFO: [Synth 8-226] default block is never used [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:121]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:34' bound to instance 'uALU' of component 'ALU' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:43]
+INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/adder.vhd:34' bound to instance 'u1' of component 'adder' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/adder.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'adder' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/adder.vhd:42]
+INFO: [Synth 8-3491] module 'logic' declared at 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/logic.vhd:34' bound to instance 'u2' of component 'logic' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'logic' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/logic.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'logic' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/logic.vhd:42]
+INFO: [Synth 8-3491] module 'mux' declared at 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:34' bound to instance 'u3' of component 'mux' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'mux' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:43]
+INFO: [Synth 8-226] default block is never used [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'mux' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:43]
+INFO: [Synth 8-3491] module 'PIPO' declared at 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:24' bound to instance 'uREG' of component 'PIPO' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'PIPO' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:48]
+INFO: [Synth 8-3491] module 'A' declared at 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd:34' bound to instance 'uA' of component 'A' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'A' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'A' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd:44]
+INFO: [Synth 8-3491] module 'B' declared at 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd:34' bound to instance 'uB' of component 'B' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'B' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'B' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd:44]
+INFO: [Synth 8-3491] module 'C' declared at 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd:34' bound to instance 'uC' of component 'C' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'C' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'C' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd:44]
+INFO: [Synth 8-3491] module 'D' declared at 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd:34' bound to instance 'uD' of component 'D' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'D' [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'D' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'PIPO' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (0#1) [C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:53]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1190.406 ; gain = 651.410
+Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1203.152 ; gain = 651.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1190.406 ; gain = 651.410
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1203.152 ; gain = 651.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1190.406 ; gain = 651.410
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1203.152 ; gain = 651.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1190.406 ; gain = 651.410
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1203.152 ; gain = 651.199
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -116,20 +116,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1428.941 ; gain = 889.945
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1441.055 ; gain = 889.102
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1432.727 ; gain = 893.730
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1444.828 ; gain = 892.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1432.727 ; gain = 893.730
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:36 . Memory (MB): peak = 1444.828 ; gain = 892.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -147,37 +147,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1658.930 ; gain = 1119.934
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1671.164 ; gain = 1119.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1658.930 ; gain = 1119.934
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1671.164 ; gain = 1119.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1658.930 ; gain = 1119.934
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1671.164 ; gain = 1119.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1658.930 ; gain = 1119.934
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1671.164 ; gain = 1119.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1658.930 ; gain = 1119.934
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1671.164 ; gain = 1119.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1658.930 ; gain = 1119.934
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1671.164 ; gain = 1119.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -216,16 +216,16 @@ Report Instance Areas:
 |6     |    uD   |D      |     8|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1658.930 ; gain = 1119.934
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1671.164 ; gain = 1119.211
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1658.930 ; gain = 1119.934
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1658.930 ; gain = 1119.934
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1671.164 ; gain = 1119.211
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 1671.164 ; gain = 1119.211
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1674.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1686.094 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1791.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1803.480 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -233,8 +233,8 @@ Synth Design complete | Checksum: 5443ed16
 INFO: [Common 17-83] Releasing license: Synthesis
 46 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1791.949 ; gain = 1258.777
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1791.949 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/Datapath/Datapath.runs/synth_1/Datapath.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:49 . Memory (MB): peak = 1803.480 ; gain = 1258.367
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1803.480 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/Datapath/Datapath.runs/synth_1/Datapath.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Datapath_utilization_synth.rpt -pb Datapath_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 16 18:22:37 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 11:17:45 2026...
