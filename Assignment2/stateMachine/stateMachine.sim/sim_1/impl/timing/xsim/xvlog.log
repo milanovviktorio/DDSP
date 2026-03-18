@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment2/stateMachine/stateMachine.sim/sim_1/impl/timing/xsim/tb_full_assignment2_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module A
+INFO: [VRFC 10-311] analyzing module B
+INFO: [VRFC 10-311] analyzing module C
+INFO: [VRFC 10-311] analyzing module D
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [VRFC 10-311] analyzing module PIPO
+INFO: [VRFC 10-311] analyzing module full_assignment2
+INFO: [VRFC 10-311] analyzing module stateMachine
+INFO: [VRFC 10-311] analyzing module glbl
