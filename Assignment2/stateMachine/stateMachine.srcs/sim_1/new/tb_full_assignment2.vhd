@@ -87,11 +87,11 @@ begin
     ------------------------------------------------
     -- These values will be loaded when FSM executes instructions
 
-    input <= "00000101"; -- 5 (for A)
+    input <= "00000111"; -- 5 (for A)
     wait for 40 ns;
 
     input <= "00000011"; -- 3 (for B)
-    wait for 40 ns;
+    wait for 20 ns;
 
     input <= "00000010"; -- 2 (for C)
     wait for 40 ns;
