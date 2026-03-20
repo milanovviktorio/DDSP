@@ -1,0 +1,273 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Mar 20 15:05:28 2026
+# Process ID         : 5908
+# Current directory  : C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.runs/synth_1
+# Command line       : vivado.exe -log full_assignment2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source full_assignment2.tcl
+# Log file           : C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.runs/synth_1/full_assignment2.vds
+# Journal file       : C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.runs/synth_1\vivado.jou
+# Running On         : Viktorio
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 256V
+# CPU Frequency      : 3302 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16824 MB
+# Swap memory        : 6547 MB
+# Total Virtual      : 23371 MB
+# Available Virtual  : 4514 MB
+#-----------------------------------------------------------
+source full_assignment2.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.srcs/utils_1/imports/synth_1/stateMachine.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.srcs/utils_1/imports/synth_1/stateMachine.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top full_assignment2 -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2204
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1071.129 ; gain = 531.672
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'full_assignment2' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.srcs/sources_1/new/full_assignment2.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'stateMachine' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.srcs/sources_1/new/stateMachine.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'stateMachine' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.srcs/sources_1/new/stateMachine.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'Datapath' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:53]
+INFO: [Synth 8-226] default block is never used [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:108]
+INFO: [Synth 8-226] default block is never used [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:121]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:34' bound to instance 'uALU' of component 'ALU' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:43]
+INFO: [Synth 8-3491] module 'adder' declared at 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/adder.vhd:34' bound to instance 'u1' of component 'adder' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'adder' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/adder.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'adder' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/adder.vhd:42]
+INFO: [Synth 8-3491] module 'logic' declared at 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/logic.vhd:34' bound to instance 'u2' of component 'logic' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'logic' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/logic.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'logic' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/logic.vhd:42]
+INFO: [Synth 8-3491] module 'mux' declared at 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:34' bound to instance 'u3' of component 'mux' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'mux' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:43]
+INFO: [Synth 8-226] default block is never used [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'mux' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/mux.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/ALU.vhd:43]
+INFO: [Synth 8-3491] module 'PIPO' declared at 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:24' bound to instance 'uREG' of component 'PIPO' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'PIPO' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:48]
+INFO: [Synth 8-3491] module 'A' declared at 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd:34' bound to instance 'uA' of component 'A' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'A' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'A' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/A.vhd:44]
+INFO: [Synth 8-3491] module 'B' declared at 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd:34' bound to instance 'uB' of component 'B' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'B' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'B' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/B.vhd:44]
+INFO: [Synth 8-3491] module 'C' declared at 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd:34' bound to instance 'uC' of component 'C' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'C' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'C' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/C.vhd:44]
+INFO: [Synth 8-3491] module 'D' declared at 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd:34' bound to instance 'uD' of component 'D' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'D' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'D' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/D.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'PIPO' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/PIPO.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'full_assignment2' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.srcs/sources_1/new/full_assignment2.vhd:30]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1192.234 ; gain = 652.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1192.234 ; gain = 652.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1192.234 ; gain = 652.777
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'stateMachine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               st1_reset |                            00001 |                              000
+    st2_decodeandexecute |                            00010 |                              001
+                st5_wait |                            00100 |                              100
+             st4_execute |                            01000 |                              011
+                st3_wait |                            10000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'stateMachine'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1192.234 ; gain = 652.777
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 16    
++---Registers : 
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   4 Input    8 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	  17 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 6     
+	   8 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 17    
+	   8 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.395 ; gain = 883.938
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 1429.602 ; gain = 890.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 1429.762 ; gain = 890.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     2|
+|3     |LUT2 |     4|
+|4     |LUT3 |    14|
+|5     |LUT4 |     6|
+|6     |LUT5 |    25|
+|7     |LUT6 |    20|
+|8     |FDCE |    32|
+|9     |FDRE |    12|
+|10    |FDSE |     1|
+|11    |IBUF |    10|
+|12    |OBUF |    28|
++------+-----+------+
+
+Report Instance Areas: 
++------+------------+-------------+------+
+|      |Instance    |Module       |Cells |
++------+------------+-------------+------+
+|1     |top         |             |   155|
+|2     |  uControl  |stateMachine |    50|
+|3     |  uDatapath |Datapath     |    66|
+|4     |    uREG    |PIPO         |    66|
+|5     |      uA    |A            |    20|
+|6     |      uB    |B            |    27|
+|7     |      uC    |C            |     8|
+|8     |      uD    |D            |    11|
++------+------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1675.859 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1793.336 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c1afaf8
+INFO: [Common 17-83] Releasing license: Synthesis
+52 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:50 . Memory (MB): peak = 1793.336 ; gain = 1263.172
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1793.336 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.runs/synth_1/full_assignment2.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file full_assignment2_utilization_synth.rpt -pb full_assignment2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 20 15:06:27 2026...
