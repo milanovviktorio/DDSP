@@ -185,8 +185,8 @@ port map(
 -- OUTPUT PORTS
 ------------------------------------------------
 
-Out1 <= QA;
-Out2 <= QB;
+Out1 <= ALU_A;
+Out2 <= ALU_B;
 
 
 end Structural;

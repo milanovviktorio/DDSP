@@ -8,7 +8,7 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Fri Mar 20 15:05:28 2026
+  **** Start of session at: Fri Mar 20 16:36:14 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -24,9 +24,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2204
+INFO: [Synth 8-7075] Helper process launched with PID 3928
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1071.129 ; gain = 531.672
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1072.148 ; gain = 533.824
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'full_assignment2' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.srcs/sources_1/new/full_assignment2.vhd:30]
 INFO: [Synth 8-638] synthesizing module 'stateMachine' [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.srcs/sources_1/new/stateMachine.vhd:53]
@@ -65,18 +65,18 @@ INFO: [Synth 8-256] done synthesizing module 'PIPO' (0#1) [C:/Users/vikip/Deskto
 INFO: [Synth 8-256] done synthesizing module 'Datapath' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/Datapath/Datapath.srcs/sources_1/new/Datapath.vhd:53]
 INFO: [Synth 8-256] done synthesizing module 'full_assignment2' (0#1) [C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.srcs/sources_1/new/full_assignment2.vhd:30]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1192.234 ; gain = 652.777
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1192.789 ; gain = 654.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1192.234 ; gain = 652.777
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1192.789 ; gain = 654.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
-INFO: [Device 21-403] Loading part xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1192.234 ; gain = 652.777
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1192.789 ; gain = 654.465
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'stateMachine'
 ---------------------------------------------------------------------------------------------------
@@ -90,7 +90,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'state
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'stateMachine'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1192.234 ; gain = 652.777
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1192.789 ; gain = 654.465
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -135,20 +135,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 1423.395 ; gain = 883.938
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1425.508 ; gain = 887.184
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 1429.602 ; gain = 890.145
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1431.855 ; gain = 893.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:42 . Memory (MB): peak = 1429.762 ; gain = 890.305
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1432.020 ; gain = 893.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -166,37 +166,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.078 ; gain = 1123.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.078 ; gain = 1123.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.078 ; gain = 1123.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.078 ; gain = 1123.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.078 ; gain = 1123.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.078 ; gain = 1123.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -215,10 +215,10 @@ Report Cell Usage:
 |1     |BUFG |     1|
 |2     |LUT1 |     2|
 |3     |LUT2 |     4|
-|4     |LUT3 |    14|
+|4     |LUT3 |    16|
 |5     |LUT4 |     6|
-|6     |LUT5 |    25|
-|7     |LUT6 |    20|
+|6     |LUT5 |    28|
+|7     |LUT6 |    19|
 |8     |FDCE |    32|
 |9     |FDRE |    12|
 |10    |FDSE |     1|
@@ -230,35 +230,35 @@ Report Instance Areas:
 +------+------------+-------------+------+
 |      |Instance    |Module       |Cells |
 +------+------------+-------------+------+
-|1     |top         |             |   155|
-|2     |  uControl  |stateMachine |    50|
-|3     |  uDatapath |Datapath     |    66|
-|4     |    uREG    |PIPO         |    66|
-|5     |      uA    |A            |    20|
-|6     |      uB    |B            |    27|
-|7     |      uC    |C            |     8|
-|8     |      uD    |D            |    11|
+|1     |top         |             |   159|
+|2     |  uControl  |stateMachine |    48|
+|3     |  uDatapath |Datapath     |    72|
+|4     |    uREG    |PIPO         |    72|
+|5     |      uA    |A            |    22|
+|6     |      uB    |B            |    26|
+|7     |      uC    |C            |    10|
+|8     |      uD    |D            |    14|
 +------+------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.078 ; gain = 1123.754
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:45 . Memory (MB): peak = 1660.777 ; gain = 1121.320
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.078 ; gain = 1123.754
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1662.078 ; gain = 1123.754
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1675.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1677.121 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1793.336 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1793.594 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: c1afaf8
+Synth Design complete | Checksum: 1ee5573c
 INFO: [Common 17-83] Releasing license: Synthesis
 52 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:50 . Memory (MB): peak = 1793.336 ; gain = 1263.172
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1793.336 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1793.594 ; gain = 1261.488
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1793.594 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.runs/synth_1/full_assignment2.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file full_assignment2_utilization_synth.rpt -pb full_assignment2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 20 15:06:27 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 20 16:36:45 2026...

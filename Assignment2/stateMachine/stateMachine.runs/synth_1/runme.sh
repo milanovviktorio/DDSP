@@ -12,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/Apps/Vivado/2025.2/Vitis/bin;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/lib/nt64:C:/Apps/Vivado/2025.2/Vivado/bin
+  PATH=D:/Apps/Vivado/2025.2/Vitis/bin;D:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/bin/nt64;D:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/lib/nt64:D:/Apps/Vivado/2025.2/Vivado/bin
 else
-  PATH=C:/Apps/Vivado/2025.2/Vitis/bin;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/bin/nt64;C:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/lib/nt64:C:/Apps/Vivado/2025.2/Vivado/bin:$PATH
+  PATH=D:/Apps/Vivado/2025.2/Vitis/bin;D:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/bin/nt64;D:/Apps/Vivado/2025.2/Vivado/ids_lite/ISE/lib/nt64:D:/Apps/Vivado/2025.2/Vivado/bin:$PATH
 fi
 export PATH
 

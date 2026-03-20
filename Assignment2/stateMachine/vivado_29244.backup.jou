@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Mar 20 15:18:35 2026
+# Process ID         : 29244
+# Current directory  : C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent13076 C:\Users\vikip\Desktop\GitHub Repos\DDSP\Assignment2\stateMachine\stateMachine.xpr
+# Log file           : C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/vivado.log
+# Journal file       : C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine\vivado.jou
+# Running On         : Viktorio
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 256V
+# CPU Frequency      : 3302 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16824 MB
+# Swap memory        : 6547 MB
+# Total Virtual      : 23371 MB
+# Available Virtual  : 5790 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment2/stateMachine/stateMachine.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
