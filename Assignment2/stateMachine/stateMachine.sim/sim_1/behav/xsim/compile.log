@@ -1,2 +1,1 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/usnam/Documents/GitHub/DDSP/Assignment2/stateMachine/stateMachine.srcs/sim_1/new/tb_full_assignment2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_full_assignment2'
+ERROR: [XSIM 43-4316] Can not find file: ../../../../../counter/counter.srcs/sources_1/new/jk_flipflop.vhd
