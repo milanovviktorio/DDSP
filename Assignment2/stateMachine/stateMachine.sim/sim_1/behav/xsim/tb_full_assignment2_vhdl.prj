@@ -9,9 +9,13 @@ vhdl xil_defaultlib  \
 "../../../../../Datapath/Datapath.srcs/sources_1/new/PIPO.vhd" \
 "../../../../../Datapath/Datapath.srcs/sources_1/new/adder.vhd" \
 "../../../../stateMachine.srcs/sources_1/new/stateMachine.vhd" \
+"../../../../stateMachine.srcs/sources_1/new/full_assignment2.vhd" \
 "../../../../../Datapath/Datapath.srcs/sources_1/new/logic.vhd" \
 "../../../../../Datapath/Datapath.srcs/sources_1/new/mux.vhd" \
+<<<<<<< HEAD
 "../../../../stateMachine.srcs/sources_1/new/full_assignment2.vhd" \
+=======
+>>>>>>> fae018778d54875a226aaf1e69c828558ef2c9d0
 "../../../../stateMachine.srcs/sim_1/new/tb_full_assignment2.vhd" \
 
 # Do not sort compile order
