@@ -38,13 +38,11 @@ end ROM;
 architecture Behavioral of ROM is
 
 type rom_type is array (0 to 31) of std_logic_vector (7 downto 0);
-constant rom : rom_type := (x"00", x"11", 
-x"22", x"33", x"44", x"55", x"66",
-x"77", x"88", x"99", x"aa", x"bb", 
-x"cc", x"dd", x"ee", x"ff", x"00", x"11", 
-x"22", x"33", x"44", x"55", x"66",
-x"77", x"88", x"99", x"aa", x"bb", 
-x"cc", x"dd", x"ee", x"ff"
+constant rom : rom_type := (
+    x"80", x"98", x"B0", x"C7", x"DA", x"EA", x"F6", x"FD",
+    x"FF", x"FD", x"F6", x"EA", x"DA", x"C7", x"B0", x"98",
+    x"80", x"67", x"4F", x"38", x"25", x"15", x"09", x"02",
+    x"00", x"02", x"09", x"15", x"25", x"38", x"4F", x"67"
 );
 
 begin
