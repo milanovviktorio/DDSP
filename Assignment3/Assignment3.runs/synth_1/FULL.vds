@@ -1,0 +1,254 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Apr  3 16:44:39 2026
+# Process ID         : 35216
+# Current directory  : C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.runs/synth_1
+# Command line       : vivado.exe -log FULL.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FULL.tcl
+# Log file           : C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.runs/synth_1/FULL.vds
+# Journal file       : C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-QU8QVCL
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13705H
+# CPU Frequency      : 2918 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34086 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36234 MB
+# Available Virtual  : 15073 MB
+#-----------------------------------------------------------
+source FULL.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/utils_1/imports/synth_1/ROM.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/utils_1/imports/synth_1/ROM.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top FULL -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11324
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1075.582 ; gain = 532.535
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FULL' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/FULL.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'control' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/control.vhd:46]
+	Parameter N bound to: 50000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'control' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/control.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/ROM.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/ROM.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'PWM' [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/PWM.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'PWM' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/PWM.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'FULL' (0#1) [C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/FULL.vhd:14]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1193.684 ; gain = 650.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1193.684 ; gain = 650.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1193.684 ; gain = 650.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/utils_1/imports/synth_1/ROM.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1193.684 ; gain = 650.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1193.684 ; gain = 650.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1193.684 ; gain = 650.637
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1431.375 ; gain = 888.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|ROM         | rom[0]     | 32x8          | LUT            | 
+|FULL        | ROM/rom[0] | 32x8          | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1431.375 ; gain = 888.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1431.375 ; gain = 888.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1662.797 ; gain = 1119.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1662.797 ; gain = 1119.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1662.797 ; gain = 1119.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1662.797 ; gain = 1119.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1662.797 ; gain = 1119.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1662.797 ; gain = 1119.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     3|
+|4     |LUT2   |     3|
+|5     |LUT3   |     2|
+|6     |LUT4   |    17|
+|7     |LUT5   |    12|
+|8     |LUT6   |     1|
+|9     |FDCE   |    13|
+|10    |FDRE   |    16|
+|11    |IBUF   |     2|
+|12    |OBUF   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------+--------+------+
+|      |Instance  |Module  |Cells |
++------+----------+--------+------+
+|1     |top       |        |    76|
+|2     |  Control |control |    54|
+|3     |  PWM     |PWM     |    18|
++------+----------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1662.797 ; gain = 1119.750
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1662.797 ; gain = 1119.750
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1662.797 ; gain = 1119.750
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1677.828 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1794.516 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c71f7941
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1794.516 ; gain = 1258.867
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1794.516 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.runs/synth_1/FULL.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file FULL_utilization_synth.rpt -pb FULL_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  3 16:45:01 2026...

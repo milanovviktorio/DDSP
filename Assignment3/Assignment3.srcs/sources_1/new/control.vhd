@@ -38,13 +38,14 @@ entity control is
     Port (
         clkin       : in  STD_LOGIC;
         clkout       : out  STD_LOGIC;
-        reset     : in  STD_LOGIC
+        reset     : in  STD_LOGIC;
+        addr_out: out STD_LOGIC_VECTOR(4 downto 0)
     );
 end control;
 
 architecture Behavioral of control is
 signal counter_divider : integer range 0 to N-1 := 0;
-signal counter_control : unsigned(5 downto 0) := (others => '0');
+signal counter_control : unsigned(4 downto 0) := (others => '0');
 signal clkdiv : STD_LOGIC := '0';
 begin
     process (clkin, reset)
@@ -64,5 +65,5 @@ begin
     end process;
     
     clkout <= clkdiv;
-
+    addr_out <= std_logic_vector(counter_control);
 end Behavioral;
