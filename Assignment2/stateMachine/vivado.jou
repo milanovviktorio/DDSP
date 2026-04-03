@@ -43,3 +43,4 @@ synth_design -rtl -rtl_skip_mlo -name rtl_1
 close_design
 launch_simulation
 source tb_full_assignment2.tcl
+close_sim

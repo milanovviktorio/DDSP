@@ -452,3 +452,7 @@ source tb_full_assignment2.tcl
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_full_assignment2_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 4651.168 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 20 21:07:20 2026...
