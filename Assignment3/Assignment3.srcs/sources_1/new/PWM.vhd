@@ -1,43 +1,31 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04/03/2026 10:53:52 AM
--- Design Name: 
--- Module Name: PWM - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use IEEE.NUMERIC_STD.ALL;
 
 entity PWM is
---  Port ( );
+    Port (
+        clk       : in  STD_LOGIC;
+        reset     : in  STD_LOGIC;
+        duty      : in  STD_LOGIC_VECTOR(7 downto 0); -- 8-bit duty cycle
+        pwm_out   : out STD_LOGIC
+    );
 end PWM;
 
 architecture Behavioral of PWM is
-
+    signal counter : unsigned(7 downto 0) := (others => '0');
 begin
 
+    -- 8-bit counter process
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            counter <= (others => '0');
+        elsif rising_edge(clk) then
+            counter <= counter + 1;
+        end if;
+    end process;
+
+    -- PWM generation logic
+    pwm_out <= '1' when counter < unsigned(duty) else '0';
 
 end Behavioral;
