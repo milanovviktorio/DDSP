@@ -2,5 +2,10 @@
 2020.2
 Nov 14 2025
 19:37:27
-C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sim_1/new/testROM.vhd,1775213979,vhdl,,,,testrom,,,,,,,,
-C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/ROM.vhd,1775219814,vhdl,,,,rom,,,,,,,,
+C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sim_1/new/tb_FULL.vhd,1775308706,vhdl,,,,tb_full,,,,,,,,
+C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sim_1/new/testROM.vhd,1775307430,vhdl,,,,testrom,,,,,,,,
+C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sources_1/new/FULL.vhd,1775307430,vhdl,,,,full,,,,,,,,
+C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sources_1/new/PWM.vhd,1775307430,vhdl,C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sources_1/new/FULL.vhd,,,pwm,,,,,,,,
+C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sources_1/new/ROM.vhd,1775307430,vhdl,C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sources_1/new/sine_wave.vhd,,,rom,,,,,,,,
+C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sources_1/new/control.vhd,1775307430,vhdl,C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sources_1/new/sine_wave.vhd,,,control,,,,,,,,
+C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sources_1/new/sine_wave.vhd,1775307430,vhdl,C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sources_1/new/FULL.vhd,,,sine_wave,,,,,,,,
