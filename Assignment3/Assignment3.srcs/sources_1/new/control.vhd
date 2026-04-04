@@ -34,29 +34,35 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity control is
-    Generic (N : integer := 50000);
+    generic (
+        N : integer := 256  -- Maximum supported divide value
+    );
     Port (
-        clkin       : in  STD_LOGIC;
-        clkout       : out  STD_LOGIC;
+        clkin     : in  STD_LOGIC;
+        clkout    : out  STD_LOGIC;
         reset     : in  STD_LOGIC;
-        addr_out: out STD_LOGIC_VECTOR(4 downto 0)
+        divide_by : in  STD_LOGIC_VECTOR(7 downto 0);
+        addr_out  : out STD_LOGIC_VECTOR(4 downto 0)
     );
 end control;
 
 architecture Behavioral of control is
-signal counter_divider : integer range 0 to N-1 := 0;
-signal counter_control : unsigned(4 downto 0) := (others => '0');
-signal clkdiv : STD_LOGIC := '0';
+signal counter_control       : unsigned(4 downto 0) := (others => '0');
+signal counter_divider       : integer range 0 to N-1 := 0;
+signal counter_divider_latch : integer range 2 to N := 2;
+signal clkdiv : STD_LOGIC    := '0';
 begin
     process (clkin, reset)
     begin   
         if reset = '1' then
-            counter_control <= (others => '0');
             clkdiv <= '0';
+            counter_divider_latch <= 2;
         elsif rising_edge(clkin) then
-            if counter_divider = (N/2-1) then
-                clkdiv <= not clkdiv;
+            clkdiv <= '0';
+            if counter_divider >= counter_divider_latch - 1 then
                 counter_divider <= 0;
+                clkdiv <= '1';
+                counter_divider_latch <= TO_INTEGER(unsigned(divide_by));
                 counter_control <= counter_control + 1;
             else    
                 counter_divider <= counter_divider + 1;
