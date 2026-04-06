@@ -21,7 +21,7 @@ architecture Structural of sine_wave is
 begin
 
     Control: entity work.control
-        generic map (N => 50000)
+        generic map (N => 256)
         port map (
             clkin      => clk,
             clkout     => clk_div,

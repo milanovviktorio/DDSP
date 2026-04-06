@@ -66,13 +66,13 @@ begin
         dip <= x"02";
         wait for 32 * 2 * 256 * 8 * 2 * 1 ns;
 
-        -- Medium frequency: div = 8
-        dip <= x"08";
-        wait for 32 * 8 * 256 * 8 * 1 ns;
+--        -- Medium frequency: div = 8
+--        dip <= x"08";
+--        wait for 32 * 8 * 256 * 8 * 1 ns;
 
-        -- Slow frequency: div = 32
-        dip <= x"20";
-        wait for 32 * 32 * 256 * 8 * 1 ns;
+--        -- Slow frequency: div = 32
+--        dip <= x"20";
+--        wait for 32 * 32 * 256 * 8 * 1 ns;
 
         wait;
     end process;
