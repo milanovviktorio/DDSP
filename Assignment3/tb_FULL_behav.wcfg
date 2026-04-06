@@ -10,13 +10,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="2,426.958 ns"></ZoomEndTime>
-      <Cursor1Time time="898.200 ns"></Cursor1Time>
+      <ZoomStartTime time="563.285 ns"></ZoomStartTime>
+      <ZoomEndTime time="4,518.286 ns"></ZoomEndTime>
+      <Cursor1Time time="1,580.863 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="121"></NameColumnWidth>
-      <ValueColumnWidth column_width="123"></ValueColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="7" />
    <wvobject fp_name="/tb_FULL/clk" type="logic">
@@ -42,6 +42,8 @@
    <wvobject fp_name="/tb_FULL/pwm_out" type="logic">
       <obj_property name="ElementShortName">pwm_out</obj_property>
       <obj_property name="ObjectShortName">pwm_out</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_FULL/dip" type="array">
       <obj_property name="ElementShortName">dip[7:0]</obj_property>

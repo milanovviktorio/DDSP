@@ -6,6 +6,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity sine_wave is
     Port (
         clk       : in  STD_LOGIC;
+        clk_out   : out STD_LOGIC;
         reset     : in  STD_LOGIC;
         div_value : in  STD_LOGIC_VECTOR(7 downto 0);
         sine_out  : out STD_LOGIC_VECTOR(7 downto 0)
@@ -37,4 +38,5 @@ begin
             clkROM => clk_div
         );
     sine_out <= sine_val;
+    clk_out <= clk_div;
 end Structural;

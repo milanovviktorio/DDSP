@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Mon Apr  6 19:12:54 2026
+| Date         : Mon Apr  6 19:47:19 2026
 | Host         : VITKO running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file FULL_control_sets_placed.rpt
 | Design       : FULL
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     6 |
-|    Minimum number of control sets                        |     6 |
+| Total control sets                                       |     8 |
+|    Minimum number of control sets                        |     8 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    10 |
@@ -39,11 +39,11 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     6 |
-| >= 0 to < 4        |     0 |
+| Total control sets |     8 |
+| >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     5 |
+| >= 8 to < 10       |     6 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              16 |            9 |
-| No           | No                    | Yes                    |               9 |            3 |
+| No           | No                    | No                     |              16 |            7 |
+| No           | No                    | Yes                    |               9 |            4 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               5 |            1 |
-| Yes          | No                    | Yes                    |               8 |            3 |
-| Yes          | Yes                   | No                     |               8 |            2 |
+| Yes          | No                    | No                     |               5 |            2 |
+| Yes          | No                    | Yes                    |              16 |            3 |
+| Yes          | Yes                   | No                     |               8 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,12 +73,14 @@ Table of Contents
 +------------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
 |      Clock Signal      |                 Enable Signal                |               Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
 +------------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG         | Sine_wave/Control/counter_divider[7]_i_1_n_0 |                                              |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG         |                                              | reset_IBUF                                   |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG         | Sine_wave/Control/counter_divider[7]_i_1_n_0 |                                              |                2 |              5 |         2.50 |
 |  Sine_wave/Control/CLK |                                              |                                              |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG         |                                              |                                              |                7 |              8 |         1.14 |
-|  clk_IBUF_BUFG         | Sine_wave/Control/counter_divider[7]_i_2_n_0 | Sine_wave/Control/counter_divider[7]_i_1_n_0 |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG         | Sine_wave/Control/clkdiv0_carry_n_0          | reset_IBUF                                   |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG         |                                              | reset_IBUF                                   |                3 |              9 |         3.00 |
+|  Sine_wave/Control/CLK |                                              | reset_IBUF                                   |                3 |              8 |         2.67 |
+|  Sine_wave/Control/CLK | PWM/duty_latched_0[0]                        | reset_IBUF                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG         |                                              |                                              |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG         | Sine_wave/Control/clkdiv0_carry_n_0          | reset_IBUF                                   |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG         | Sine_wave/Control/counter_divider[7]_i_2_n_0 | Sine_wave/Control/counter_divider[7]_i_1_n_0 |                3 |              8 |         2.67 |
 +------------------------+----------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
 
 
