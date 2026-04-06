@@ -23,3 +23,67 @@
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+close_design
+launch_simulation
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+save_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+set_property -name {xsim.simulate.runtime} -value {20000ns} -objects [get_filesets sim_1]
+synth_design -top FULL -part xc7z020clg484-1 -lint 
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim

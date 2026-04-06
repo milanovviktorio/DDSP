@@ -33,7 +33,8 @@ begin
     ROM: entity work.ROM
         port map (
             address  => addr_out,
-            data_out => sine_val
+            data_out => sine_val,
+            clkROM => clk_div
         );
     sine_out <= sine_val;
 end Structural;

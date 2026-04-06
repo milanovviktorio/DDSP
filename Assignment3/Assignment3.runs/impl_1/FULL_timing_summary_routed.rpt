@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Mon Apr  6 17:56:40 2026
+| Date         : Mon Apr  6 19:13:15 2026
 | Host         : VITKO running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file FULL_timing_summary_routed.rpt -pb FULL_timing_summary_routed.pb -rpx FULL_timing_summary_routed.rpx -warn_on_violation
 | Design       : FULL
@@ -43,7 +43,7 @@ Timing Summary Report
 
 Rule       Severity          Description                  Violations  
 ---------  ----------------  ---------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell  37          
+TIMING-17  Critical Warning  Non-clocked sequential cell  46          
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -53,10 +53,10 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (37)
+1. checking no_clock (46)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (82)
+4. checking unconstrained_internal_endpoints (92)
 5. checking no_input_delay (9)
 6. checking no_output_delay (1)
 7. checking multiple_clock (0)
@@ -66,9 +66,11 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (37)
+1. checking no_clock (46)
 -------------------------
- There are 37 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 38 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: Sine_wave/Control/clkdiv_reg/Q (HIGH)
 
 
 2. checking constant_clock (0)
@@ -81,9 +83,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (82)
+4. checking unconstrained_internal_endpoints (92)
 -------------------------------------------------
- There are 82 pins that are not constrained for maximum delay. (HIGH)
+ There are 92 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -142,7 +144,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                   83          inf        0.000                      0                   83           NA           NA                      NA                    NA  
+        inf        0.000                      0                   93          inf        0.000                      0                   93           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -211,218 +213,270 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay            83 Endpoints
-Min Delay            83 Endpoints
+Max Delay            93 Endpoints
+Min Delay            93 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 Sine_wave/Control/counter_control_reg[2]/C
-                            (rising edge-triggered cell FDRE)
+  Source:                 PWM/counter_reg[2]/C
+                            (rising edge-triggered cell FDCE)
   Destination:            pwm_out
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.983ns  (logic 4.975ns (35.579%)  route 9.008ns (64.421%))
-  Logic Levels:           5  (CARRY4=1 FDRE=1 LUT4=1 LUT5=1 OBUF=1)
+  Data Path Delay:        13.175ns  (logic 4.869ns (36.956%)  route 8.306ns (63.044%))
+  Logic Levels:           4  (CARRY4=1 FDCE=1 LUT4=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X110Y87        FDRE                         0.000     0.000 r  Sine_wave/Control/counter_control_reg[2]/C
-    SLICE_X110Y87        FDRE (Prop_fdre_C_Q)         0.419     0.419 r  Sine_wave/Control/counter_control_reg[2]/Q
-                         net (fo=11, routed)          0.924     1.343    Sine_wave/Control/counter_control_reg[2]
-    SLICE_X111Y87        LUT5 (Prop_lut5_I2_O)        0.299     1.642 r  Sine_wave/Control/g0_b0/O
-                         net (fo=2, routed)           0.967     2.609    Sine_wave/Control/g0_b0_n_0
-    SLICE_X111Y86        LUT4 (Prop_lut4_I0_O)        0.124     2.733 r  Sine_wave/Control/pwm_out0_carry_i_8/O
-                         net (fo=1, routed)           0.000     2.733    PWM/S[0]
-    SLICE_X111Y86        CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532     3.265 r  PWM/pwm_out0_carry/CO[3]
-                         net (fo=1, routed)           7.117    10.382    pwm_out_OBUF
-    Y11                  OBUF (Prop_obuf_I_O)         3.601    13.983 r  pwm_out_OBUF_inst/O
-                         net (fo=0)                   0.000    13.983    pwm_out
+    SLICE_X110Y100       FDCE                         0.000     0.000 r  PWM/counter_reg[2]/C
+    SLICE_X110Y100       FDCE (Prop_fdce_C_Q)         0.419     0.419 r  PWM/counter_reg[2]/Q
+                         net (fo=7, routed)           0.982     1.401    Sine_wave/ROM/Q[2]
+    SLICE_X111Y99        LUT4 (Prop_lut4_I1_O)        0.299     1.700 r  Sine_wave/ROM/pwm_out0_carry_i_7/O
+                         net (fo=1, routed)           0.000     1.700    PWM/S[1]
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.250 r  PWM/pwm_out0_carry/CO[3]
+                         net (fo=1, routed)           7.324     9.574    pwm_out_OBUF
+    Y11                  OBUF (Prop_obuf_I_O)         3.601    13.175 r  pwm_out_OBUF_inst/O
+                         net (fo=0)                   0.000    13.175    pwm_out
     Y11                                                               r  pwm_out (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Sine_wave/Control/counter_control_reg[0]/CE
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.377ns  (logic 1.057ns (19.660%)  route 4.320ns (80.340%))
-  Logic Levels:           2  (IBUF=1 LUT2=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=18, routed)          3.213     4.146    Sine_wave/Control/AR[0]
-    SLICE_X110Y100       LUT2 (Prop_lut2_I1_O)        0.124     4.270 r  Sine_wave/Control/counter_divider[7]_i_1/O
-                         net (fo=13, routed)          1.107     5.377    Sine_wave/Control/counter_divider[7]_i_1_n_0
-    SLICE_X110Y87        FDRE                                         r  Sine_wave/Control/counter_control_reg[0]/CE
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Sine_wave/Control/counter_control_reg[1]/CE
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.377ns  (logic 1.057ns (19.660%)  route 4.320ns (80.340%))
-  Logic Levels:           2  (IBUF=1 LUT2=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=18, routed)          3.213     4.146    Sine_wave/Control/AR[0]
-    SLICE_X110Y100       LUT2 (Prop_lut2_I1_O)        0.124     4.270 r  Sine_wave/Control/counter_divider[7]_i_1/O
-                         net (fo=13, routed)          1.107     5.377    Sine_wave/Control/counter_divider[7]_i_1_n_0
-    SLICE_X110Y87        FDRE                                         r  Sine_wave/Control/counter_control_reg[1]/CE
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Sine_wave/Control/counter_control_reg[2]/CE
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.377ns  (logic 1.057ns (19.660%)  route 4.320ns (80.340%))
-  Logic Levels:           2  (IBUF=1 LUT2=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=18, routed)          3.213     4.146    Sine_wave/Control/AR[0]
-    SLICE_X110Y100       LUT2 (Prop_lut2_I1_O)        0.124     4.270 r  Sine_wave/Control/counter_divider[7]_i_1/O
-                         net (fo=13, routed)          1.107     5.377    Sine_wave/Control/counter_divider[7]_i_1_n_0
-    SLICE_X110Y87        FDRE                                         r  Sine_wave/Control/counter_control_reg[2]/CE
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Sine_wave/Control/counter_control_reg[3]/CE
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.049ns  (logic 1.057ns (20.935%)  route 3.992ns (79.065%))
-  Logic Levels:           2  (IBUF=1 LUT2=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=18, routed)          3.213     4.146    Sine_wave/Control/AR[0]
-    SLICE_X110Y100       LUT2 (Prop_lut2_I1_O)        0.124     4.270 r  Sine_wave/Control/counter_divider[7]_i_1/O
-                         net (fo=13, routed)          0.780     5.049    Sine_wave/Control/counter_divider[7]_i_1_n_0
-    SLICE_X111Y87        FDRE                                         r  Sine_wave/Control/counter_control_reg[3]/CE
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Sine_wave/Control/counter_control_reg[4]/CE
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.049ns  (logic 1.057ns (20.935%)  route 3.992ns (79.065%))
-  Logic Levels:           2  (IBUF=1 LUT2=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=18, routed)          3.213     4.146    Sine_wave/Control/AR[0]
-    SLICE_X110Y100       LUT2 (Prop_lut2_I1_O)        0.124     4.270 r  Sine_wave/Control/counter_divider[7]_i_1/O
-                         net (fo=13, routed)          0.780     5.049    Sine_wave/Control/counter_divider[7]_i_1_n_0
-    SLICE_X111Y87        FDRE                                         r  Sine_wave/Control/counter_control_reg[4]/CE
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Sine_wave/Control/counter_divider_reg[3]/R
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        4.958ns  (logic 1.057ns (21.320%)  route 3.901ns (78.680%))
-  Logic Levels:           2  (IBUF=1 LUT2=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=18, routed)          3.213     4.146    Sine_wave/Control/AR[0]
-    SLICE_X110Y100       LUT2 (Prop_lut2_I1_O)        0.124     4.270 r  Sine_wave/Control/counter_divider[7]_i_1/O
-                         net (fo=13, routed)          0.688     4.958    Sine_wave/Control/counter_divider[7]_i_1_n_0
-    SLICE_X110Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[3]/R
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Sine_wave/Control/counter_divider_reg[4]/R
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        4.958ns  (logic 1.057ns (21.320%)  route 3.901ns (78.680%))
-  Logic Levels:           2  (IBUF=1 LUT2=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=18, routed)          3.213     4.146    Sine_wave/Control/AR[0]
-    SLICE_X110Y100       LUT2 (Prop_lut2_I1_O)        0.124     4.270 r  Sine_wave/Control/counter_divider[7]_i_1/O
-                         net (fo=13, routed)          0.688     4.958    Sine_wave/Control/counter_divider[7]_i_1_n_0
-    SLICE_X110Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[4]/R
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 reset
-                            (input port)
+  Source:                 Sine_wave/Control/counter_divider_latch_reg[0]/C
+                            (rising edge-triggered cell FDCE)
   Destination:            Sine_wave/Control/counter_divider_reg[0]/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        4.954ns  (logic 1.057ns (21.338%)  route 3.897ns (78.662%))
-  Logic Levels:           2  (IBUF=1 LUT2=1)
+  Data Path Delay:        4.354ns  (logic 1.204ns (27.656%)  route 3.150ns (72.344%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT5=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=18, routed)          3.213     4.146    Sine_wave/Control/AR[0]
-    SLICE_X110Y100       LUT2 (Prop_lut2_I1_O)        0.124     4.270 r  Sine_wave/Control/counter_divider[7]_i_1/O
-                         net (fo=13, routed)          0.684     4.954    Sine_wave/Control/counter_divider[7]_i_1_n_0
-    SLICE_X111Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[0]/R
+    SLICE_X113Y102       FDCE                         0.000     0.000 r  Sine_wave/Control/counter_divider_latch_reg[0]/C
+    SLICE_X113Y102       FDCE (Prop_fdce_C_Q)         0.456     0.456 r  Sine_wave/Control/counter_divider_latch_reg[0]/Q
+                         net (fo=6, routed)           0.846     1.302    Sine_wave/Control/counter_divider_latch_reg_n_0_[0]
+    SLICE_X113Y102       LUT6 (Prop_lut6_I2_O)        0.124     1.426 r  Sine_wave/Control/clkdiv0_carry_i_9/O
+                         net (fo=2, routed)           0.738     2.164    Sine_wave/Control/clkdiv0_carry_i_9_n_0
+    SLICE_X112Y102       LUT5 (Prop_lut5_I3_O)        0.124     2.288 r  Sine_wave/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     2.288    Sine_wave/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X112Y102       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.664 r  Sine_wave/Control/clkdiv0_carry/CO[3]
+                         net (fo=10, routed)          0.936     3.600    Sine_wave/Control/clkdiv0_carry_n_0
+    SLICE_X110Y101       LUT2 (Prop_lut2_I0_O)        0.124     3.724 r  Sine_wave/Control/counter_divider[7]_i_1/O
+                         net (fo=13, routed)          0.630     4.354    Sine_wave/Control/counter_divider[7]_i_1_n_0
+    SLICE_X113Y101       FDRE                                         r  Sine_wave/Control/counter_divider_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
+  Source:                 Sine_wave/Control/counter_divider_latch_reg[0]/C
+                            (rising edge-triggered cell FDCE)
   Destination:            Sine_wave/Control/counter_divider_reg[1]/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        4.954ns  (logic 1.057ns (21.338%)  route 3.897ns (78.662%))
-  Logic Levels:           2  (IBUF=1 LUT2=1)
+  Data Path Delay:        4.354ns  (logic 1.204ns (27.656%)  route 3.150ns (72.344%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT5=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=18, routed)          3.213     4.146    Sine_wave/Control/AR[0]
-    SLICE_X110Y100       LUT2 (Prop_lut2_I1_O)        0.124     4.270 r  Sine_wave/Control/counter_divider[7]_i_1/O
-                         net (fo=13, routed)          0.684     4.954    Sine_wave/Control/counter_divider[7]_i_1_n_0
-    SLICE_X111Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[1]/R
+    SLICE_X113Y102       FDCE                         0.000     0.000 r  Sine_wave/Control/counter_divider_latch_reg[0]/C
+    SLICE_X113Y102       FDCE (Prop_fdce_C_Q)         0.456     0.456 r  Sine_wave/Control/counter_divider_latch_reg[0]/Q
+                         net (fo=6, routed)           0.846     1.302    Sine_wave/Control/counter_divider_latch_reg_n_0_[0]
+    SLICE_X113Y102       LUT6 (Prop_lut6_I2_O)        0.124     1.426 r  Sine_wave/Control/clkdiv0_carry_i_9/O
+                         net (fo=2, routed)           0.738     2.164    Sine_wave/Control/clkdiv0_carry_i_9_n_0
+    SLICE_X112Y102       LUT5 (Prop_lut5_I3_O)        0.124     2.288 r  Sine_wave/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     2.288    Sine_wave/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X112Y102       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.664 r  Sine_wave/Control/clkdiv0_carry/CO[3]
+                         net (fo=10, routed)          0.936     3.600    Sine_wave/Control/clkdiv0_carry_n_0
+    SLICE_X110Y101       LUT2 (Prop_lut2_I0_O)        0.124     3.724 r  Sine_wave/Control/counter_divider[7]_i_1/O
+                         net (fo=13, routed)          0.630     4.354    Sine_wave/Control/counter_divider[7]_i_1_n_0
+    SLICE_X113Y101       FDRE                                         r  Sine_wave/Control/counter_divider_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_divider_latch_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Sine_wave/Control/counter_divider_reg[2]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.354ns  (logic 1.204ns (27.656%)  route 3.150ns (72.344%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y102       FDCE                         0.000     0.000 r  Sine_wave/Control/counter_divider_latch_reg[0]/C
+    SLICE_X113Y102       FDCE (Prop_fdce_C_Q)         0.456     0.456 r  Sine_wave/Control/counter_divider_latch_reg[0]/Q
+                         net (fo=6, routed)           0.846     1.302    Sine_wave/Control/counter_divider_latch_reg_n_0_[0]
+    SLICE_X113Y102       LUT6 (Prop_lut6_I2_O)        0.124     1.426 r  Sine_wave/Control/clkdiv0_carry_i_9/O
+                         net (fo=2, routed)           0.738     2.164    Sine_wave/Control/clkdiv0_carry_i_9_n_0
+    SLICE_X112Y102       LUT5 (Prop_lut5_I3_O)        0.124     2.288 r  Sine_wave/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     2.288    Sine_wave/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X112Y102       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.664 r  Sine_wave/Control/clkdiv0_carry/CO[3]
+                         net (fo=10, routed)          0.936     3.600    Sine_wave/Control/clkdiv0_carry_n_0
+    SLICE_X110Y101       LUT2 (Prop_lut2_I0_O)        0.124     3.724 r  Sine_wave/Control/counter_divider[7]_i_1/O
+                         net (fo=13, routed)          0.630     4.354    Sine_wave/Control/counter_divider[7]_i_1_n_0
+    SLICE_X113Y101       FDRE                                         r  Sine_wave/Control/counter_divider_reg[2]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_divider_latch_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Sine_wave/Control/counter_divider_reg[3]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.354ns  (logic 1.204ns (27.656%)  route 3.150ns (72.344%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y102       FDCE                         0.000     0.000 r  Sine_wave/Control/counter_divider_latch_reg[0]/C
+    SLICE_X113Y102       FDCE (Prop_fdce_C_Q)         0.456     0.456 r  Sine_wave/Control/counter_divider_latch_reg[0]/Q
+                         net (fo=6, routed)           0.846     1.302    Sine_wave/Control/counter_divider_latch_reg_n_0_[0]
+    SLICE_X113Y102       LUT6 (Prop_lut6_I2_O)        0.124     1.426 r  Sine_wave/Control/clkdiv0_carry_i_9/O
+                         net (fo=2, routed)           0.738     2.164    Sine_wave/Control/clkdiv0_carry_i_9_n_0
+    SLICE_X112Y102       LUT5 (Prop_lut5_I3_O)        0.124     2.288 r  Sine_wave/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     2.288    Sine_wave/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X112Y102       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.664 r  Sine_wave/Control/clkdiv0_carry/CO[3]
+                         net (fo=10, routed)          0.936     3.600    Sine_wave/Control/clkdiv0_carry_n_0
+    SLICE_X110Y101       LUT2 (Prop_lut2_I0_O)        0.124     3.724 r  Sine_wave/Control/counter_divider[7]_i_1/O
+                         net (fo=13, routed)          0.630     4.354    Sine_wave/Control/counter_divider[7]_i_1_n_0
+    SLICE_X113Y101       FDRE                                         r  Sine_wave/Control/counter_divider_reg[3]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_divider_latch_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Sine_wave/Control/counter_divider_reg[4]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.354ns  (logic 1.204ns (27.656%)  route 3.150ns (72.344%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y102       FDCE                         0.000     0.000 r  Sine_wave/Control/counter_divider_latch_reg[0]/C
+    SLICE_X113Y102       FDCE (Prop_fdce_C_Q)         0.456     0.456 r  Sine_wave/Control/counter_divider_latch_reg[0]/Q
+                         net (fo=6, routed)           0.846     1.302    Sine_wave/Control/counter_divider_latch_reg_n_0_[0]
+    SLICE_X113Y102       LUT6 (Prop_lut6_I2_O)        0.124     1.426 r  Sine_wave/Control/clkdiv0_carry_i_9/O
+                         net (fo=2, routed)           0.738     2.164    Sine_wave/Control/clkdiv0_carry_i_9_n_0
+    SLICE_X112Y102       LUT5 (Prop_lut5_I3_O)        0.124     2.288 r  Sine_wave/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     2.288    Sine_wave/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X112Y102       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.664 r  Sine_wave/Control/clkdiv0_carry/CO[3]
+                         net (fo=10, routed)          0.936     3.600    Sine_wave/Control/clkdiv0_carry_n_0
+    SLICE_X110Y101       LUT2 (Prop_lut2_I0_O)        0.124     3.724 r  Sine_wave/Control/counter_divider[7]_i_1/O
+                         net (fo=13, routed)          0.630     4.354    Sine_wave/Control/counter_divider[7]_i_1_n_0
+    SLICE_X113Y101       FDRE                                         r  Sine_wave/Control/counter_divider_reg[4]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_divider_latch_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Sine_wave/Control/counter_divider_reg[5]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.354ns  (logic 1.204ns (27.656%)  route 3.150ns (72.344%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y102       FDCE                         0.000     0.000 r  Sine_wave/Control/counter_divider_latch_reg[0]/C
+    SLICE_X113Y102       FDCE (Prop_fdce_C_Q)         0.456     0.456 r  Sine_wave/Control/counter_divider_latch_reg[0]/Q
+                         net (fo=6, routed)           0.846     1.302    Sine_wave/Control/counter_divider_latch_reg_n_0_[0]
+    SLICE_X113Y102       LUT6 (Prop_lut6_I2_O)        0.124     1.426 r  Sine_wave/Control/clkdiv0_carry_i_9/O
+                         net (fo=2, routed)           0.738     2.164    Sine_wave/Control/clkdiv0_carry_i_9_n_0
+    SLICE_X112Y102       LUT5 (Prop_lut5_I3_O)        0.124     2.288 r  Sine_wave/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     2.288    Sine_wave/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X112Y102       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.664 r  Sine_wave/Control/clkdiv0_carry/CO[3]
+                         net (fo=10, routed)          0.936     3.600    Sine_wave/Control/clkdiv0_carry_n_0
+    SLICE_X110Y101       LUT2 (Prop_lut2_I0_O)        0.124     3.724 r  Sine_wave/Control/counter_divider[7]_i_1/O
+                         net (fo=13, routed)          0.630     4.354    Sine_wave/Control/counter_divider[7]_i_1_n_0
+    SLICE_X113Y101       FDRE                                         r  Sine_wave/Control/counter_divider_reg[5]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_divider_latch_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Sine_wave/Control/counter_divider_reg[6]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.215ns  (logic 1.204ns (28.564%)  route 3.011ns (71.436%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y102       FDCE                         0.000     0.000 r  Sine_wave/Control/counter_divider_latch_reg[0]/C
+    SLICE_X113Y102       FDCE (Prop_fdce_C_Q)         0.456     0.456 r  Sine_wave/Control/counter_divider_latch_reg[0]/Q
+                         net (fo=6, routed)           0.846     1.302    Sine_wave/Control/counter_divider_latch_reg_n_0_[0]
+    SLICE_X113Y102       LUT6 (Prop_lut6_I2_O)        0.124     1.426 r  Sine_wave/Control/clkdiv0_carry_i_9/O
+                         net (fo=2, routed)           0.738     2.164    Sine_wave/Control/clkdiv0_carry_i_9_n_0
+    SLICE_X112Y102       LUT5 (Prop_lut5_I3_O)        0.124     2.288 r  Sine_wave/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     2.288    Sine_wave/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X112Y102       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.664 r  Sine_wave/Control/clkdiv0_carry/CO[3]
+                         net (fo=10, routed)          0.936     3.600    Sine_wave/Control/clkdiv0_carry_n_0
+    SLICE_X110Y101       LUT2 (Prop_lut2_I0_O)        0.124     3.724 r  Sine_wave/Control/counter_divider[7]_i_1/O
+                         net (fo=13, routed)          0.491     4.215    Sine_wave/Control/counter_divider[7]_i_1_n_0
+    SLICE_X112Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[6]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_divider_latch_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Sine_wave/Control/counter_divider_reg[7]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.215ns  (logic 1.204ns (28.564%)  route 3.011ns (71.436%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y102       FDCE                         0.000     0.000 r  Sine_wave/Control/counter_divider_latch_reg[0]/C
+    SLICE_X113Y102       FDCE (Prop_fdce_C_Q)         0.456     0.456 r  Sine_wave/Control/counter_divider_latch_reg[0]/Q
+                         net (fo=6, routed)           0.846     1.302    Sine_wave/Control/counter_divider_latch_reg_n_0_[0]
+    SLICE_X113Y102       LUT6 (Prop_lut6_I2_O)        0.124     1.426 r  Sine_wave/Control/clkdiv0_carry_i_9/O
+                         net (fo=2, routed)           0.738     2.164    Sine_wave/Control/clkdiv0_carry_i_9_n_0
+    SLICE_X112Y102       LUT5 (Prop_lut5_I3_O)        0.124     2.288 r  Sine_wave/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     2.288    Sine_wave/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X112Y102       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.664 r  Sine_wave/Control/clkdiv0_carry/CO[3]
+                         net (fo=10, routed)          0.936     3.600    Sine_wave/Control/clkdiv0_carry_n_0
+    SLICE_X110Y101       LUT2 (Prop_lut2_I0_O)        0.124     3.724 r  Sine_wave/Control/counter_divider[7]_i_1/O
+                         net (fo=13, routed)          0.491     4.215    Sine_wave/Control/counter_divider[7]_i_1_n_0
+    SLICE_X112Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[7]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_divider_latch_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Sine_wave/Control/counter_control_reg[0]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.210ns  (logic 1.204ns (28.598%)  route 3.006ns (71.402%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y102       FDCE                         0.000     0.000 r  Sine_wave/Control/counter_divider_latch_reg[0]/C
+    SLICE_X113Y102       FDCE (Prop_fdce_C_Q)         0.456     0.456 r  Sine_wave/Control/counter_divider_latch_reg[0]/Q
+                         net (fo=6, routed)           0.846     1.302    Sine_wave/Control/counter_divider_latch_reg_n_0_[0]
+    SLICE_X113Y102       LUT6 (Prop_lut6_I2_O)        0.124     1.426 r  Sine_wave/Control/clkdiv0_carry_i_9/O
+                         net (fo=2, routed)           0.738     2.164    Sine_wave/Control/clkdiv0_carry_i_9_n_0
+    SLICE_X112Y102       LUT5 (Prop_lut5_I3_O)        0.124     2.288 r  Sine_wave/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     2.288    Sine_wave/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X112Y102       CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     2.664 r  Sine_wave/Control/clkdiv0_carry/CO[3]
+                         net (fo=10, routed)          0.936     3.600    Sine_wave/Control/clkdiv0_carry_n_0
+    SLICE_X110Y101       LUT2 (Prop_lut2_I0_O)        0.124     3.724 r  Sine_wave/Control/counter_divider[7]_i_1/O
+                         net (fo=13, routed)          0.486     4.210    Sine_wave/Control/counter_divider[7]_i_1_n_0
+    SLICE_X110Y98        FDRE                                         r  Sine_wave/Control/counter_control_reg[0]/CE
   -------------------------------------------------------------------    -------------------
 
 
@@ -432,90 +486,37 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 dip_sw/switches_in_reg[0]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Sine_wave/Control/counter_divider_latch_reg[0]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.274ns  (logic 0.164ns (59.853%)  route 0.110ns (40.147%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X112Y102       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[0]/C
-    SLICE_X112Y102       FDRE (Prop_fdre_C_Q)         0.164     0.164 r  dip_sw/switches_in_reg[0]/Q
-                         net (fo=1, routed)           0.110     0.274    Sine_wave/Control/counter_divider_latch_reg[7]_0[0]
-    SLICE_X113Y101       FDCE                                         r  Sine_wave/Control/counter_divider_latch_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 dip_sw/switches_in_reg[2]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Sine_wave/Control/counter_divider_latch_reg[2]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.309ns  (logic 0.164ns (53.051%)  route 0.145ns (46.949%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X112Y102       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[2]/C
-    SLICE_X112Y102       FDRE (Prop_fdre_C_Q)         0.164     0.164 r  dip_sw/switches_in_reg[2]/Q
-                         net (fo=1, routed)           0.145     0.309    Sine_wave/Control/counter_divider_latch_reg[7]_0[2]
-    SLICE_X113Y101       FDCE                                         r  Sine_wave/Control/counter_divider_latch_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
   Source:                 dip_sw/switches_in_reg[5]/C
                             (rising edge-triggered cell FDRE)
   Destination:            Sine_wave/Control/counter_divider_latch_reg[5]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.318ns  (logic 0.164ns (51.592%)  route 0.154ns (48.408%))
+  Data Path Delay:        0.243ns  (logic 0.141ns (58.024%)  route 0.102ns (41.976%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y100       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[5]/C
-    SLICE_X112Y100       FDRE (Prop_fdre_C_Q)         0.164     0.164 r  dip_sw/switches_in_reg[5]/Q
-                         net (fo=1, routed)           0.154     0.318    Sine_wave/Control/counter_divider_latch_reg[7]_0[5]
-    SLICE_X111Y101       FDCE                                         r  Sine_wave/Control/counter_divider_latch_reg[5]/D
+    SLICE_X111Y101       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[5]/C
+    SLICE_X111Y101       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  dip_sw/switches_in_reg[5]/Q
+                         net (fo=1, routed)           0.102     0.243    Sine_wave/Control/counter_divider_latch_reg[7]_0[5]
+    SLICE_X112Y101       FDCE                                         r  Sine_wave/Control/counter_divider_latch_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 dip_sw/switches_in_reg[1]/C
+  Source:                 dip_sw/switches_in_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Sine_wave/Control/counter_divider_latch_reg[1]/D
+  Destination:            Sine_wave/Control/counter_divider_latch_reg[0]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.328ns  (logic 0.164ns (50.018%)  route 0.164ns (49.982%))
+  Data Path Delay:        0.251ns  (logic 0.141ns (56.174%)  route 0.110ns (43.826%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y100       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[1]/C
-    SLICE_X112Y100       FDRE (Prop_fdre_C_Q)         0.164     0.164 r  dip_sw/switches_in_reg[1]/Q
-                         net (fo=1, routed)           0.164     0.328    Sine_wave/Control/counter_divider_latch_reg[7]_0[1]
-    SLICE_X113Y101       FDPE                                         r  Sine_wave/Control/counter_divider_latch_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Sine_wave/Control/counter_divider_reg[1]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Sine_wave/Control/counter_divider_reg[5]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.330ns  (logic 0.186ns (56.347%)  route 0.144ns (43.653%))
-  Logic Levels:           2  (FDRE=1 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X111Y100       FDRE                         0.000     0.000 r  Sine_wave/Control/counter_divider_reg[1]/C
-    SLICE_X111Y100       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Sine_wave/Control/counter_divider_reg[1]/Q
-                         net (fo=8, routed)           0.144     0.285    Sine_wave/Control/counter_divider_reg[1]
-    SLICE_X111Y100       LUT6 (Prop_lut6_I1_O)        0.045     0.330 r  Sine_wave/Control/counter_divider[5]_i_1/O
-                         net (fo=1, routed)           0.000     0.330    Sine_wave/Control/p_0_in[5]
-    SLICE_X111Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[5]/D
+    SLICE_X113Y103       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[0]/C
+    SLICE_X113Y103       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  dip_sw/switches_in_reg[0]/Q
+                         net (fo=1, routed)           0.110     0.251    Sine_wave/Control/counter_divider_latch_reg[7]_0[0]
+    SLICE_X113Y102       FDCE                                         r  Sine_wave/Control/counter_divider_latch_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -524,91 +525,144 @@ Slack:                    inf
   Destination:            Sine_wave/Control/counter_divider_latch_reg[3]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.333ns  (logic 0.164ns (49.267%)  route 0.169ns (50.733%))
+  Data Path Delay:        0.251ns  (logic 0.141ns (56.174%)  route 0.110ns (43.826%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y102       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[3]/C
-    SLICE_X112Y102       FDRE (Prop_fdre_C_Q)         0.164     0.164 r  dip_sw/switches_in_reg[3]/Q
-                         net (fo=1, routed)           0.169     0.333    Sine_wave/Control/counter_divider_latch_reg[7]_0[3]
-    SLICE_X112Y101       FDCE                                         r  Sine_wave/Control/counter_divider_latch_reg[3]/D
+    SLICE_X113Y103       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[3]/C
+    SLICE_X113Y103       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  dip_sw/switches_in_reg[3]/Q
+                         net (fo=1, routed)           0.110     0.251    Sine_wave/Control/counter_divider_latch_reg[7]_0[3]
+    SLICE_X113Y102       FDCE                                         r  Sine_wave/Control/counter_divider_latch_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 PWM/counter_reg[1]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            PWM/counter_reg[5]/D
+  Source:                 dip_sw/switches_in_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Sine_wave/Control/counter_divider_latch_reg[1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.353ns  (logic 0.186ns (52.695%)  route 0.167ns (47.305%))
-  Logic Levels:           2  (FDCE=1 LUT6=1)
+  Data Path Delay:        0.253ns  (logic 0.141ns (55.730%)  route 0.112ns (44.270%))
+  Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X110Y86        FDCE                         0.000     0.000 r  PWM/counter_reg[1]/C
-    SLICE_X110Y86        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  PWM/counter_reg[1]/Q
-                         net (fo=8, routed)           0.167     0.308    PWM/Q[1]
-    SLICE_X110Y86        LUT6 (Prop_lut6_I1_O)        0.045     0.353 r  PWM/counter[5]_i_1/O
-                         net (fo=1, routed)           0.000     0.353    PWM/plusOp__0[5]
-    SLICE_X110Y86        FDCE                                         r  PWM/counter_reg[5]/D
+    SLICE_X113Y100       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[1]/C
+    SLICE_X113Y100       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  dip_sw/switches_in_reg[1]/Q
+                         net (fo=1, routed)           0.112     0.253    Sine_wave/Control/counter_divider_latch_reg[7]_0[1]
+    SLICE_X112Y101       FDPE                                         r  Sine_wave/Control/counter_divider_latch_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dip_sw/switches_in_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Sine_wave/Control/counter_divider_latch_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.317ns  (logic 0.141ns (44.461%)  route 0.176ns (55.539%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y102       FDRE                         0.000     0.000 r  dip_sw/switches_in_reg[2]/C
+    SLICE_X111Y102       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  dip_sw/switches_in_reg[2]/Q
+                         net (fo=1, routed)           0.176     0.317    Sine_wave/Control/counter_divider_latch_reg[7]_0[2]
+    SLICE_X110Y102       FDCE                                         r  Sine_wave/Control/counter_divider_latch_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_control_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Sine_wave/ROM/data_out_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.328ns  (logic 0.186ns (56.667%)  route 0.142ns (43.333%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y98        FDRE                         0.000     0.000 r  Sine_wave/Control/counter_control_reg[1]/C
+    SLICE_X110Y98        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Sine_wave/Control/counter_control_reg[1]/Q
+                         net (fo=12, routed)          0.142     0.283    Sine_wave/Control/counter_control_reg[1]
+    SLICE_X111Y98        LUT5 (Prop_lut5_I1_O)        0.045     0.328 r  Sine_wave/Control/g0_b1/O
+                         net (fo=1, routed)           0.000     0.328    Sine_wave/ROM/D[1]
+    SLICE_X111Y98        FDRE                                         r  Sine_wave/ROM/data_out_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_control_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Sine_wave/ROM/data_out_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.329ns  (logic 0.186ns (56.495%)  route 0.143ns (43.505%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y98        FDRE                         0.000     0.000 r  Sine_wave/Control/counter_control_reg[1]/C
+    SLICE_X110Y98        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Sine_wave/Control/counter_control_reg[1]/Q
+                         net (fo=12, routed)          0.143     0.284    Sine_wave/Control/counter_control_reg[1]
+    SLICE_X111Y98        LUT5 (Prop_lut5_I1_O)        0.045     0.329 r  Sine_wave/Control/g0_b3/O
+                         net (fo=1, routed)           0.000     0.329    Sine_wave/ROM/D[3]
+    SLICE_X111Y98        FDRE                                         r  Sine_wave/ROM/data_out_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_control_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Sine_wave/ROM/data_out_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.331ns  (logic 0.189ns (57.060%)  route 0.142ns (42.940%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y98        FDRE                         0.000     0.000 r  Sine_wave/Control/counter_control_reg[1]/C
+    SLICE_X110Y98        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Sine_wave/Control/counter_control_reg[1]/Q
+                         net (fo=12, routed)          0.142     0.283    Sine_wave/Control/counter_control_reg[1]
+    SLICE_X111Y98        LUT5 (Prop_lut5_I1_O)        0.048     0.331 r  Sine_wave/Control/g0_b2/O
+                         net (fo=1, routed)           0.000     0.331    Sine_wave/ROM/D[2]
+    SLICE_X111Y98        FDRE                                         r  Sine_wave/ROM/data_out_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Sine_wave/Control/counter_control_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            Sine_wave/ROM/data_out_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.333ns  (logic 0.190ns (57.018%)  route 0.143ns (42.982%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y98        FDRE                         0.000     0.000 r  Sine_wave/Control/counter_control_reg[1]/C
+    SLICE_X110Y98        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Sine_wave/Control/counter_control_reg[1]/Q
+                         net (fo=12, routed)          0.143     0.284    Sine_wave/Control/counter_control_reg[1]
+    SLICE_X111Y98        LUT5 (Prop_lut5_I1_O)        0.049     0.333 r  Sine_wave/Control/g0_b4/O
+                         net (fo=1, routed)           0.000     0.333    Sine_wave/ROM/D[4]
+    SLICE_X111Y98        FDRE                                         r  Sine_wave/ROM/data_out_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 Sine_wave/Control/counter_divider_reg[1]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Sine_wave/Control/counter_divider_reg[2]/D
+  Destination:            Sine_wave/Control/counter_divider_reg[5]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.362ns  (logic 0.183ns (50.533%)  route 0.179ns (49.467%))
-  Logic Levels:           2  (FDRE=1 LUT3=1)
+  Data Path Delay:        0.345ns  (logic 0.186ns (53.910%)  route 0.159ns (46.090%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X111Y100       FDRE                         0.000     0.000 r  Sine_wave/Control/counter_divider_reg[1]/C
-    SLICE_X111Y100       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Sine_wave/Control/counter_divider_reg[1]/Q
-                         net (fo=8, routed)           0.179     0.320    Sine_wave/Control/counter_divider_reg[1]
-    SLICE_X111Y100       LUT3 (Prop_lut3_I1_O)        0.042     0.362 r  Sine_wave/Control/counter_divider[2]_i_1/O
-                         net (fo=1, routed)           0.000     0.362    Sine_wave/Control/p_0_in[2]
-    SLICE_X111Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Sine_wave/Control/counter_divider_reg[1]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Sine_wave/Control/counter_divider_reg[1]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.365ns  (logic 0.186ns (50.940%)  route 0.179ns (49.060%))
-  Logic Levels:           2  (FDRE=1 LUT2=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X111Y100       FDRE                         0.000     0.000 r  Sine_wave/Control/counter_divider_reg[1]/C
-    SLICE_X111Y100       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Sine_wave/Control/counter_divider_reg[1]/Q
-                         net (fo=8, routed)           0.179     0.320    Sine_wave/Control/counter_divider_reg[1]
-    SLICE_X111Y100       LUT2 (Prop_lut2_I1_O)        0.045     0.365 r  Sine_wave/Control/counter_divider[1]_i_1/O
-                         net (fo=1, routed)           0.000     0.365    Sine_wave/Control/p_0_in[1]
-    SLICE_X111Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Sine_wave/Control/counter_divider_reg[0]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Sine_wave/Control/counter_divider_reg[3]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.365ns  (logic 0.186ns (50.920%)  route 0.179ns (49.080%))
-  Logic Levels:           2  (FDRE=1 LUT4=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X111Y100       FDRE                         0.000     0.000 r  Sine_wave/Control/counter_divider_reg[0]/C
-    SLICE_X111Y100       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Sine_wave/Control/counter_divider_reg[0]/Q
-                         net (fo=9, routed)           0.179     0.320    Sine_wave/Control/counter_divider_reg[0]
-    SLICE_X110Y100       LUT4 (Prop_lut4_I1_O)        0.045     0.365 r  Sine_wave/Control/counter_divider[3]_i_1/O
-                         net (fo=1, routed)           0.000     0.365    Sine_wave/Control/p_0_in[3]
-    SLICE_X110Y100       FDRE                                         r  Sine_wave/Control/counter_divider_reg[3]/D
+    SLICE_X113Y101       FDRE                         0.000     0.000 r  Sine_wave/Control/counter_divider_reg[1]/C
+    SLICE_X113Y101       FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Sine_wave/Control/counter_divider_reg[1]/Q
+                         net (fo=8, routed)           0.159     0.300    Sine_wave/Control/counter_divider_reg[1]
+    SLICE_X113Y101       LUT6 (Prop_lut6_I1_O)        0.045     0.345 r  Sine_wave/Control/counter_divider[5]_i_1/O
+                         net (fo=1, routed)           0.000     0.345    Sine_wave/Control/p_0_in[5]
+    SLICE_X113Y101       FDRE                                         r  Sine_wave/Control/counter_divider_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
 

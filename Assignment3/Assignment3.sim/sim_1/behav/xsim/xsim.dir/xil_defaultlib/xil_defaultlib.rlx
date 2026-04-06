@@ -2,9 +2,10 @@
 2020.2
 Nov 14 2025
 19:37:27
-C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sim_1/new/tb_FULL.vhd,1775489932,vhdl,,,,tb_full,,,,,,,,
+C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sim_1/new/tb_FULL.vhd,1775495636,vhdl,,,,tb_full,,,,,,,,
+C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sim_1/new/testnDiv.vhd,1775494280,vhdl,,,,testndiv,,,,,,,,
 C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/PWM.vhd,1775218276,vhdl,C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sim_1/new/tb_FULL.vhd,,,pwm,,,,,,,,
-C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/ROM.vhd,1775219814,vhdl,C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/sine_wave.vhd,,,rom,,,,,,,,
+C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/ROM.vhd,1775495497,vhdl,C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/sine_wave.vhd,,,rom,,,,,,,,
 C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/control.vhd,1775487006,vhdl,C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/sine_wave.vhd,,,control,,,,,,,,
 C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/dip_sw.vhd,1775487006,vhdl,C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sim_1/new/tb_FULL.vhd,,,dip_sw,,,,,,,,
-C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/sine_wave.vhd,1775490739,vhdl,C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sim_1/new/tb_FULL.vhd,,,sine_wave,,,,,,,,
+C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sources_1/new/sine_wave.vhd,1775491354,vhdl,C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.srcs/sim_1/new/tb_FULL.vhd,,,sine_wave,,,,,,,,

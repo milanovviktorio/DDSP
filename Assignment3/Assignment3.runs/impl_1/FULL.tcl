@@ -110,6 +110,7 @@ set rc [catch {
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param general.usePosixSpawnForFork 1
   set_param chipscope.maxJobs 4
+  set_param synth.incrementalSynthesisCache {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/.Xil/Vivado-31716-VITKO/incrSyn}
   set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1

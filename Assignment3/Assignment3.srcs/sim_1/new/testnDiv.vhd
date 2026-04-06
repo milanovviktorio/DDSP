@@ -6,32 +6,38 @@ end testnDiv;
 
 architecture Behavioral of testnDiv is
 
-    component nDivider
-        Generic (N : integer := 50000);
+    component control
+        Generic (N : integer := 256);
         Port (
             clkin  : in  STD_LOGIC;
             clkout : out STD_LOGIC;
-            rst    : in  STD_LOGIC
+            reset    : in  STD_LOGIC;
+            divide_by : in  STD_LOGIC_VECTOR(7 downto 0);
+            addr_out  : out STD_LOGIC_VECTOR(4 downto 0)
         );
     end component;
 
     signal clkin  : STD_LOGIC := '0';
-    signal rst    : STD_LOGIC := '1';
+    signal reset    : STD_LOGIC := '1';
     signal clkout : STD_LOGIC;
+    signal divide_by : STD_LOGIC_VECTOR(7 downto 0);
+    signal addr_out  : STD_LOGIC_VECTOR(4 downto 0);
 
     constant clk_period : time := 20 ns;
 
 begin
 
     -- Instantiate DUT
-    uut: nDivider
+    uut: control
         generic map (
-            N => 50000
+            N => 256
         )
         port map (
             clkin  => clkin,
-            rst    => rst,
-            clkout => clkout
+            reset    => reset,
+            clkout => clkout,
+            divide_by => divide_by,
+            addr_out => addr_out
         );
 
     -- Clock generation
@@ -51,9 +57,9 @@ begin
         -- Hold reset
         
         wait for 200 ns;
-        rst <= '0';
-
-        wait for 20 ms;
+        reset <= '0';
+        divide_by <= x"08";
+        wait for 10 ms;
     end process;
 
 end Behavioral;

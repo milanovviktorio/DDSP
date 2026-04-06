@@ -18,7 +18,7 @@ architecture Behavioral of tb_FULL is
     -- DIP switches as a single vector for easy control
     signal dip : STD_LOGIC_VECTOR(7 downto 0) := x"02";
 
-    constant CLK_PERIOD : time := 8 ns;
+    constant CLK_PERIOD : time := 10 ns;
 begin
     clk <= not clk after CLK_PERIOD / 2;
 
@@ -64,7 +64,7 @@ begin
 
         -- Fast frequency: div = 2
         dip <= x"02";
-        wait for 32 * 2 * 256 * 8 * 2 * 1 ns;
+        --wait for 32 * 2 * 256 * 8 * 2 * 1 ns;
 
 --        -- Medium frequency: div = 8
 --        dip <= x"08";
