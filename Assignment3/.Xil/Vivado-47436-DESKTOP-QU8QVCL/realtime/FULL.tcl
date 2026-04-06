@@ -16,7 +16,7 @@ set rt::rc [catch {
     set rt::cmdEcho 0
     rt::set_parameter writeXmsg true
     rt::set_parameter enableParallelHelperSpawn true
-    set ::env(RT_TMP) "C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/.Xil/Vivado-26784-DESKTOP-QU8QVCL/realtime/tmp"
+    set ::env(RT_TMP) "C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/.Xil/Vivado-47436-DESKTOP-QU8QVCL/realtime/tmp"
     if { [ info exists ::env(RT_TMP) ] } {
       file delete -force $::env(RT_TMP)
       file mkdir $::env(RT_TMP)
@@ -42,6 +42,7 @@ set rt::rc [catch {
     set rt::useElabCache false
     if {$rt::useElabCache == false} {
       rt::read_vhdl -lib xil_defaultlib {
+      {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/dip_sw.vhd}
       {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/control.vhd}
       {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/ROM.vhd}
       {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.srcs/sources_1/new/sine_wave.vhd}
@@ -71,7 +72,7 @@ set rt::rc [catch {
     rt::set_parameter webTalkPath {}
     rt::set_parameter synthDebugLog false
     rt::set_parameter printModuleName false
-    rt::set_parameter enableSplitFlowPath "C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/.Xil/Vivado-26784-DESKTOP-QU8QVCL/"
+    rt::set_parameter enableSplitFlowPath "C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/.Xil/Vivado-47436-DESKTOP-QU8QVCL/"
     set ok_to_delete_rt_tmp true 
     if { [rt::get_parameter parallelDebug] } { 
        set ok_to_delete_rt_tmp false 

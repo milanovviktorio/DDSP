@@ -5,11 +5,11 @@ SW Build: 6299465 on Fri Nov 14 19:35:11 GMT 2025
 IP Build: 6300035 on Fri Nov 14 10:48:45 MST 2025
 IP Build: 6300035 on Fri Nov 14 10:48:45 MST 2025
 
-Process ID (PID): 26784
+Process ID (PID): 47436
 License: Customer
 Mode: GUI Mode
 
-Current time: 	Fri Apr 03 15:59:33 CEST 2026
+Current time: 	Mon Apr 06 15:13:28 CEST 2026
 Time zone: 	Central European Standard Time (Europe/Paris)
 
 OS: Windows 11
@@ -52,14 +52,14 @@ Vivado layouts directory: C:/Users/liubo/AppData/Roaming/Xilinx/Vivado/2025.2/da
 PlanAhead jar file: 	C:/AMDDesignTools/2025.2/Vivado/lib/classes/planAhead.jar
 Vivado log file: 	C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/vivado.log
 Vivado journal file: 	C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/vivado.jou
-Engine tmp dir: 	C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/.Xil/Vivado-26784-DESKTOP-QU8QVCL
+Engine tmp dir: 	C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/.Xil/Vivado-47436-DESKTOP-QU8QVCL
 Non-Default Parameters:	[]
 
 Xilinx & AMD Environment Variables
 --------------------------------------------------------------------------------------------
 PICO_SDK_PATH: C:\Users\liubo\Documents\GitHub projects\Pico\pico-sdk
 RDI_APPROOT: C:/AMDDesignTools/2025.2/Vivado
-RDI_ARGS:  -gui_launcher_event rodinguilauncherevent19996 "C:\Users\liubo\Documents\GitHub projects\DDSP\Assignment3\Assignment3.xpr"
+RDI_ARGS:  -gui_launcher_event rodinguilauncherevent48784 "C:\Users\liubo\Documents\GitHub projects\DDSP\Assignment3\Assignment3.xpr"
 RDI_ARGS_FUNCTION: RDI_EXEC_DEFAULT
 RDI_BASEROOT: C:/AMDDesignTools/2025.2
 RDI_BINDIR: C:/AMDDesignTools/2025.2/Vivado/bin
@@ -87,7 +87,7 @@ RDI_PYTHON3_VERSION: 3.13.0
 RDI_PYTHONHOME: C:/AMDDesignTools/2025.2/Vivado\tps\win64\python-3.13.0
 RDI_PYTHONPATH: C:/AMDDesignTools/2025.2/Vivado\tps\win64\python-3.13.0;C:/AMDDesignTools/2025.2/Vivado\tps\win64\python-3.13.0\bin;C:/AMDDesignTools/2025.2/Vivado\tps\win64\python-3.13.0\lib;C:/AMDDesignTools/2025.2/Vivado\tps\win64\python-3.13.0\lib\site-packages
 RDI_PYTHON_LD_LIBPATH: C:/AMDDesignTools/2025.2/Vivado\tps\win64\python-3.13.0\lib
-RDI_SESSION_INFO: C:\Users\liubo\Documents\GitHubprojects\DDSP\Assignment3:DESKTOP-QU8QVCL-Fri04-03-2026_15-59-16.46
+RDI_SESSION_INFO: C:\Users\liubo\Documents\GitHubprojects\DDSP\Assignment3:DESKTOP-QU8QVCL-Mon04-06-2026_15-12-27.25
 RDI_SHARED_DATA: C:/AMDDesignTools/SharedData/2025.2/data
 RDI_TPS_ROOT: C:/AMDDesignTools/2025.2/Vivado/tps/win64
 RDI_USE_JDK21: True
@@ -105,7 +105,7 @@ _RDI_CWD: C:\Users\liubo\Documents\GitHub projects\DDSP\Assignment3
 
 GUI allocated memory:	812 MB
 GUI max memory:		6,144 MB
-Engine allocated memory: 1,053 MB
+Engine allocated memory: 911 MB
 
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
@@ -120,6 +120,7 @@ Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // TclEventType: DEBUG_PROBE_SET_CHANGE
 // TclEventType: FLOW_ADDED
 // Tcl Message: open_project {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.xpr} 
+// HMemoryUtils.trashcanNow. Engine heap size: 911 MB. GUI used memory: 65 MB. Current time: 4/6/26, 3:13:29 PM CEST
 // TclEventType: MSGMGR_MOVEMSG
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: FILE_SET_NEW
@@ -143,6 +144,12 @@ Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // TclEventType: PROJECT_DASHBOARD_GADGET_NEW
 // TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
 // TclEventType: PROJECT_NEW
-// [GUI Memory]: 136 MB (+139682kb) [00:00:13]
-// [Engine Memory]: 1,000 MB (+896956kb) [00:00:13]
-// WARNING: HEventQueue.dispatchEvent() is taking  1779 ms.
+// [GUI Memory]: 125 MB (+128605kb) [00:00:23]
+// [Engine Memory]: 984 MB (+880429kb) [00:00:23]
+// [GUI Memory]: 138 MB (+7313kb) [00:00:24]
+// WARNING: HEventQueue.dispatchEvent() is taking  2020 ms.
+// Tcl Message: open_project {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/usnam/Documents/GitHub/DDSP/Assignment3' since last save. INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'. 

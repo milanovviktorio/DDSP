@@ -1,5 +1,1 @@
 Time resolution is 1 ps
-Failure: Simulation Finished
-Time: 100000100 ns  Iteration: 0  Process: /tb_FULL/stim_proc  File: C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sim_1/new/tb_FULL.vhd
-$finish called at time : 100000100 ns : File "C:/Users/gvida/OneDrive/Documents/GitHub/DDSP/Assignment3/Assignment3.srcs/sim_1/new/tb_FULL.vhd" Line 54
-INFO: xsimkernel Simulation Memory Usage: 17076 KB (Peak: 17076 KB), Simulation CPU Usage: 26374 ms
