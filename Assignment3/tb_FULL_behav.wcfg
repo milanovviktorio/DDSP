@@ -10,6 +10,7 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
+<<<<<<< HEAD
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
       <ZoomEndTime time="1,393.001 ns"></ZoomEndTime>
       <Cursor1Time time="60.000 ns"></Cursor1Time>
@@ -17,8 +18,17 @@
    <column_width_setting>
       <NameColumnWidth column_width="340"></NameColumnWidth>
       <ValueColumnWidth column_width="143"></ValueColumnWidth>
+=======
+      <ZoomStartTime time="563.285 ns"></ZoomStartTime>
+      <ZoomEndTime time="4,518.286 ns"></ZoomEndTime>
+      <Cursor1Time time="1,580.863 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="121"></NameColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
+>>>>>>> 193c9656866467073449f05be392b48e82f0b555
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="7" />
    <wvobject fp_name="/tb_FULL/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -27,6 +37,14 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_FULL/sine_sample" type="array">
+      <obj_property name="ElementShortName">sine_sample[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sine_sample[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_FULL/switch" type="array">
       <obj_property name="ElementShortName">switch[7:0]</obj_property>
       <obj_property name="ObjectShortName">switch[7:0]</obj_property>
@@ -34,10 +52,12 @@
    <wvobject fp_name="/tb_FULL/pwm_out" type="logic">
       <obj_property name="ElementShortName">pwm_out</obj_property>
       <obj_property name="ObjectShortName">pwm_out</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_FULL/sine_sample" type="array">
-      <obj_property name="ElementShortName">sine_sample[7:0]</obj_property>
-      <obj_property name="ObjectShortName">sine_sample[7:0]</obj_property>
+   <wvobject fp_name="/tb_FULL/dip" type="array">
+      <obj_property name="ElementShortName">dip[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dip[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_FULL/CLK_PERIOD" type="other">
       <obj_property name="ElementShortName">CLK_PERIOD</obj_property>

@@ -21,6 +21,7 @@ end FULL;
 architecture Structural of FULL is
 signal sine_sample : STD_LOGIC_VECTOR(7 downto 0);
 signal switch      : STD_LOGIC_VECTOR(7 downto 0);
+signal clk_out     : STD_LOGIC;
 begin
     dip_sw: entity work.dip_sw
         port map (
@@ -39,6 +40,7 @@ begin
     Sine_wave: entity work.sine_wave
         port map (
             clk      => clk,
+            clk_out  => clk_out,
             reset    => reset,
             sine_out => sine_sample,
             div_value => switch
@@ -46,7 +48,7 @@ begin
 
     PWM: entity work.PWM
         port map (
-            clk     => clk,
+            clk     => clk_out,
             reset   => reset,
             duty    => sine_sample,
             pwm_out => pwm_out

@@ -3,26 +3,30 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Mon Apr  6 15:12:32 2026
-# Process ID         : 47436
-# Current directory  : C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent48784 C:\Users\liubo\Documents\GitHub projects\DDSP\Assignment3\Assignment3.xpr
-# Log file           : C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/vivado.log
-# Journal file       : C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3\vivado.jou
-# Running On         : DESKTOP-QU8QVCL
+# Start of session at: Mon Apr  6 16:50:15 2026
+# Process ID         : 31716
+# Current directory  : C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent33176 C:\Users\vikip\Desktop\GitHub Repos\DDSP\Assignment3\Assignment3.xpr
+# Log file           : C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/vivado.log
+# Journal file       : C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3\vivado.jou
+# Running On         : VITKO
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26200
-# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13705H
-# CPU Frequency      : 2918 MHz
-# CPU Physical cores : 14
-# CPU Logical cores  : 20
-# Host memory        : 34086 MB
-# Swap memory        : 2147 MB
-# Total Virtual      : 36234 MB
-# Available Virtual  : 18877 MB
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12500H
+# CPU Frequency      : 3110 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16886 MB
+# Swap memory        : 8593 MB
+# Total Virtual      : 25480 MB
+# Available Virtual  : 4570 MB
 #-----------------------------------------------------------
 start_gui
+<<<<<<< HEAD
 open_project {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/Assignment3.xpr}
+=======
+open_project {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/Assignment3.xpr}
+>>>>>>> 193c9656866467073449f05be392b48e82f0b555
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1 -jobs 12
@@ -30,6 +34,7 @@ wait_on_run synth_1
 launch_runs impl_1 -jobs 12
 wait_on_run impl_1
 open_run impl_1
+<<<<<<< HEAD
 synth_design -top FULL -part xc7z020clg484-1 -lint 
 synth_design -rtl -rtl_skip_mlo -name rtl_1
 launch_simulation
@@ -83,3 +88,213 @@ launch_simulation
 open_wave_config {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment3/tb_FULL_behav.wcfg}
 source tb_FULL.tcl
 close_sim
+=======
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+close_design
+launch_simulation
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+save_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+set_property -name {xsim.simulate.runtime} -value {20000ns} -objects [get_filesets sim_1]
+synth_design -top FULL -part xc7z020clg484-1 -lint 
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+open_project {C:/Users/vikip/Desktop/GitHub Repos/EL_Semester_4/DDSP/CLKdivider/CLKdivider.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+launch_simulation
+source testnDiv.tcl
+close_sim
+current_project Assignment3
+close_design
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top testnDiv [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top control [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+launch_simulation
+launch_simulation
+launch_simulation
+synth_design -top control -part xc7z020clg484-1 -lint 
+launch_simulation
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source testnDiv.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source testnDiv.tcl
+save_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source testnDiv.tcl
+current_project CLKdivider
+launch_simulation
+source testnDiv.tcl
+current_project Assignment3
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source testnDiv.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source testnDiv.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_FULL [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top FULL [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+refresh_design
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+save_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+save_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+launch_simulation
+open_wave_config {C:/Users/vikip/Desktop/GitHub Repos/DDSP/Assignment3/tb_FULL_behav.wcfg}
+source tb_FULL.tcl
+close_sim
+close_design
+close_design
+>>>>>>> 193c9656866467073449f05be392b48e82f0b555

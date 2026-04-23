@@ -32,7 +32,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity ROM is
     Port ( address : in STD_LOGIC_VECTOR (4 downto 0);
-           data_out : out STD_LOGIC_VECTOR (7 downto 0));
+           data_out : out STD_LOGIC_VECTOR (7 downto 0);
+           clkROM : in STD_LOGIC);
 end ROM;
 
 architecture Behavioral of ROM is
@@ -47,8 +48,10 @@ constant rom : rom_type := (
 
 begin
 
-process(address)
+process(clkROM)
 begin 
-    data_out <= rom(to_integer(unsigned(address)));
+    if rising_edge(clkROM) then
+        data_out <= rom(to_integer(unsigned(address)));
+    end if;
 end process;
 end Behavioral;
