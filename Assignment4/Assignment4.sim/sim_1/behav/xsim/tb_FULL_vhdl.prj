@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Assignment4.srcs/sources_1/new/dip_sw.vhd" \
+"../../../../Assignment4.srcs/sources_1/new/control.vhd" \
+"../../../../Assignment4.srcs/sources_1/new/ROM.vhd" \
+"../../../../Assignment4.srcs/sources_1/new/sine_wave.vhd" \
+"../../../../Assignment4.srcs/sources_1/new/avg.vhd" \
+"../../../../Assignment4.srcs/sources_1/new/PWM.vhd" \
+"../../../../Assignment4.srcs/sources_1/new/FULL.vhd" \
+"../../../../Assignment4.srcs/sim_1/new/tb_FULL.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sim_1/new/tb_FULL.vhd,1776941409,vhdl,,,,tb_full,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/FULL.vhd,1776941130,vhdl,C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sim_1/new/tb_FULL.vhd,,,full,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/PWM.vhd,1775224746,vhdl,C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/FULL.vhd,,,pwm,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/ROM.vhd,1775224746,vhdl,C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/sine_wave.vhd,,,rom,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/avg.vhd,1776940752,vhdl,C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/FULL.vhd,,,avg,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/control.vhd,1776940377,vhdl,C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/sine_wave.vhd,,,control,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/dip_sw.vhd,1776940653,vhdl,C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/FULL.vhd,,,dip_sw,,,,,,,,
+C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/sine_wave.vhd,1776941227,vhdl,C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/FULL.vhd,,,sine_wave,,,,,,,,
