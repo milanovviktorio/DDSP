@@ -21,3 +21,5 @@ set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN H17 [get_ports Dip_SW6]
 set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN M15 [get_ports Dip_SW7]
+set_property src_info {type:XDC file:1 line:23 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AA11     [get_ports pwm_out2]
