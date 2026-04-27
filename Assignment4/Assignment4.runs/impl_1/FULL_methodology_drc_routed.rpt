@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Fri Apr 24 13:35:04 2026
+| Date         : Mon Apr 27 16:17:14 2026
 | Host         : DESKTOP-QU8QVCL running 64-bit major release  (build 9200)
 | Command      : report_methodology -file FULL_methodology_drc_routed.rpt -pb FULL_methodology_drc_routed.pb -rpx FULL_methodology_drc_routed.rpx
 | Design       : FULL
@@ -714,172 +714,172 @@ Related violations: <none>
 
 TIMING-17#137 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/clkdiv_reg/C is not reached by a timing clock
+The clock pin dip_sw/switches_avg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#138 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_control_reg[0]/C is not reached by a timing clock
+The clock pin dip_sw/switches_avg_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#139 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_control_reg[1]/C is not reached by a timing clock
+The clock pin dip_sw/switches_avg_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#140 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_control_reg[2]/C is not reached by a timing clock
+The clock pin dip_sw/switches_avg_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#141 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_control_reg[3]/C is not reached by a timing clock
+The clock pin dip_sw/switches_freq_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#142 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_control_reg[4]/C is not reached by a timing clock
+The clock pin dip_sw/switches_freq_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#143 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_latch_reg[0]/C is not reached by a timing clock
+The clock pin dip_sw/switches_freq_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#144 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_latch_reg[1]/C is not reached by a timing clock
+The clock pin dip_sw/switches_freq_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#145 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_latch_reg[2]/C is not reached by a timing clock
+The clock pin wave_gen/Control/clkdiv_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#146 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_latch_reg[3]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_control_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#147 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[0]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_control_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#148 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[10]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_control_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#149 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[11]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_control_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#150 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[12]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_control_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#151 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[13]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_latch_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#152 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[14]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_latch_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#153 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[15]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_latch_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#154 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[1]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_latch_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#155 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[2]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#156 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[3]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#157 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[4]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#158 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[5]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#159 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[6]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#160 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[7]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#161 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[8]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#162 Critical Warning
 Non-clocked sequential cell  
-The clock pin Sine_wave/Control/counter_divider_reg[9]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#163 Critical Warning
 Non-clocked sequential cell  
-The clock pin dip_sw_inst/switches_avg_reg[0]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#164 Critical Warning
 Non-clocked sequential cell  
-The clock pin dip_sw_inst/switches_avg_reg[1]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#165 Critical Warning
 Non-clocked sequential cell  
-The clock pin dip_sw_inst/switches_avg_reg[2]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#166 Critical Warning
 Non-clocked sequential cell  
-The clock pin dip_sw_inst/switches_avg_reg[3]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#167 Critical Warning
 Non-clocked sequential cell  
-The clock pin dip_sw_inst/switches_freq_reg[0]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#168 Critical Warning
 Non-clocked sequential cell  
-The clock pin dip_sw_inst/switches_freq_reg[1]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#169 Critical Warning
 Non-clocked sequential cell  
-The clock pin dip_sw_inst/switches_freq_reg[2]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#170 Critical Warning
 Non-clocked sequential cell  
-The clock pin dip_sw_inst/switches_freq_reg[3]/C is not reached by a timing clock
+The clock pin wave_gen/Control/counter_divider_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 

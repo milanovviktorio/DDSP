@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Fri Apr 24 13:35:04 2026
+| Date         : Mon Apr 27 16:17:14 2026
 | Host         : DESKTOP-QU8QVCL running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file FULL_timing_summary_routed.rpt -pb FULL_timing_summary_routed.pb -rpx FULL_timing_summary_routed.rpx -warn_on_violation
 | Design       : FULL
@@ -57,7 +57,7 @@ Table of Contents
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
 4. checking unconstrained_internal_endpoints (480)
-5. checking no_input_delay (9)
+5. checking no_input_delay (11)
 6. checking no_output_delay (2)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
@@ -88,9 +88,9 @@ Table of Contents
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (9)
-------------------------------
- There are 9 input ports with no input delay specified. (HIGH)
+5. checking no_input_delay (11)
+-------------------------------
+ There are 11 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
@@ -225,237 +225,350 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        28.568ns  (logic 10.650ns (37.281%)  route 17.917ns (62.719%))
-  Logic Levels:           23  (CARRY4=7 FDCE=1 LUT2=1 LUT3=5 LUT4=6 LUT5=1 LUT6=1 OBUF=1)
+  Data Path Delay:        28.299ns  (logic 10.395ns (36.734%)  route 17.904ns (63.266%))
+  Logic Levels:           23  (CARRY4=7 FDCE=1 LUT2=1 LUT3=5 LUT4=6 LUT5=2 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y108       FDCE                         0.000     0.000 r  AVG/sr_reg[0][0]/C
-    SLICE_X112Y108       FDCE (Prop_fdce_C_Q)         0.518     0.518 r  AVG/sr_reg[0][0]/Q
-                         net (fo=4, routed)           0.684     1.202    AVG/Q[0]
-    SLICE_X112Y109       LUT2 (Prop_lut2_I0_O)        0.124     1.326 r  AVG/sum0_carry_i_4/O
-                         net (fo=1, routed)           0.000     1.326    AVG/sum0_carry_i_4_n_0
-    SLICE_X112Y109       CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.252     1.578 r  AVG/sum0_carry/O[0]
-                         net (fo=2, routed)           0.647     2.225    AVG/data0[0]
-    SLICE_X113Y109       LUT3 (Prop_lut3_I2_O)        0.321     2.546 r  AVG/i___0_carry_i_3/O
-                         net (fo=2, routed)           0.753     3.299    AVG/i___0_carry_i_3_n_0
-    SLICE_X113Y109       LUT4 (Prop_lut4_I3_O)        0.326     3.625 r  AVG/i___0_carry_i_6/O
-                         net (fo=1, routed)           0.000     3.625    AVG/i___0_carry_i_6_n_0
-    SLICE_X113Y109       CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.580     4.205 r  AVG/sum0_inferred__0/i___0_carry/O[2]
-                         net (fo=3, routed)           0.948     5.153    AVG/data1[2]
-    SLICE_X111Y110       LUT3 (Prop_lut3_I2_O)        0.332     5.485 r  AVG/i___0_carry_i_1__0/O
-                         net (fo=2, routed)           0.690     6.175    AVG/i___0_carry_i_1__0_n_0
-    SLICE_X111Y110       LUT4 (Prop_lut4_I3_O)        0.327     6.502 r  AVG/i___0_carry_i_4__0/O
-                         net (fo=1, routed)           0.000     6.502    AVG/i___0_carry_i_4__0_n_0
-    SLICE_X111Y110       CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.248     6.750 r  AVG/sum0_inferred__1/i___0_carry/O[3]
-                         net (fo=2, routed)           0.275     7.025    AVG/sum0_inferred__1/i___0_carry_n_4
-    SLICE_X110Y110       LUT3 (Prop_lut3_I0_O)        0.299     7.324 r  AVG/i___22_carry__0_i_3/O
-                         net (fo=2, routed)           0.787     8.111    AVG/i___22_carry__0_i_3_n_0
-    SLICE_X110Y111       LUT4 (Prop_lut4_I3_O)        0.332     8.443 r  AVG/i___22_carry__0_i_7/O
-                         net (fo=1, routed)           0.000     8.443    AVG/i___22_carry__0_i_7_n_0
-    SLICE_X110Y111       CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.247     8.690 r  AVG/sum0_inferred__1/i___22_carry__0/O[0]
-                         net (fo=3, routed)           0.657     9.347    AVG/data2[4]
-    SLICE_X109Y111       LUT3 (Prop_lut3_I2_O)        0.325     9.672 r  AVG/i___0_carry__0_i_2__1/O
-                         net (fo=2, routed)           0.896    10.567    AVG/i___0_carry__0_i_2__1_n_0
-    SLICE_X109Y111       LUT4 (Prop_lut4_I3_O)        0.326    10.893 r  AVG/i___0_carry__0_i_6__1/O
-                         net (fo=1, routed)           0.000    10.893    AVG/i___0_carry__0_i_6__1_n_0
-    SLICE_X109Y111       CARRY4 (Prop_carry4_S[1]_O[1])
-                                                      0.227    11.120 r  AVG/sum0_inferred__2/i___0_carry__0/O[1]
-                         net (fo=2, routed)           0.591    11.711    AVG/sum0_inferred__2/i___0_carry__0_n_6
-    SLICE_X108Y112       LUT3 (Prop_lut3_I2_O)        0.329    12.040 r  AVG/i___66_carry__0_i_1/O
-                         net (fo=2, routed)           0.859    12.900    AVG/i___66_carry__0_i_1_n_0
-    SLICE_X108Y112       LUT4 (Prop_lut4_I0_O)        0.348    13.248 r  AVG/i___66_carry__0_i_5/O
-                         net (fo=1, routed)           0.000    13.248    AVG/i___66_carry__0_i_5_n_0
-    SLICE_X108Y112       CARRY4 (Prop_carry4_S[2]_O[2])
-                                                      0.250    13.498 r  AVG/sum0_inferred__2/i___66_carry__0/O[2]
-                         net (fo=3, routed)           0.959    14.457    AVG/i___66_carry__0_i_7_0[5]
-    SLICE_X108Y109       LUT5 (Prop_lut5_I3_O)        0.323    14.780 r  AVG/pwm_out0_carry_i_23/O
-                         net (fo=1, routed)           0.851    15.631    dip_sw_inst/pwm_out0_carry_i_7__0_0
-    SLICE_X108Y108       LUT6 (Prop_lut6_I3_O)        0.328    15.959 r  dip_sw_inst/pwm_out0_carry_i_13/O
-                         net (fo=2, routed)           0.814    16.772    dip_sw_inst/AVG/avg_out__45[2]
-    SLICE_X110Y108       LUT4 (Prop_lut4_I0_O)        0.124    16.896 r  dip_sw_inst/pwm_out0_carry_i_7__0/O
-                         net (fo=1, routed)           0.000    16.896    PWM2/S[1]
-    SLICE_X110Y108       CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    17.446 r  PWM2/pwm_out0_carry/CO[3]
-                         net (fo=1, routed)           7.507    24.953    pwm_out2_OBUF
-    AA11                 OBUF (Prop_obuf_I_O)         3.614    28.568 r  pwm_out2_OBUF_inst/O
-                         net (fo=0)                   0.000    28.568    pwm_out2
+    SLICE_X111Y89        FDCE                         0.000     0.000 r  AVG/sr_reg[0][0]/C
+    SLICE_X111Y89        FDCE (Prop_fdce_C_Q)         0.456     0.456 r  AVG/sr_reg[0][0]/Q
+                         net (fo=10, routed)          1.142     1.598    AVG/A[0]
+    SLICE_X105Y90        LUT2 (Prop_lut2_I0_O)        0.124     1.722 r  AVG/avg_out0_carry_i_4/O
+                         net (fo=1, routed)           0.000     1.722    AVG/avg_out0_carry_i_4_n_0
+    SLICE_X105Y90        CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247     1.969 r  AVG/avg_out0_carry/O[0]
+                         net (fo=2, routed)           0.665     2.634    AVG/avg_out05_out[0]
+    SLICE_X104Y91        LUT3 (Prop_lut3_I0_O)        0.323     2.957 r  AVG/i___0_carry_i_3/O
+                         net (fo=2, routed)           0.490     3.447    AVG/i___0_carry_i_3_n_0
+    SLICE_X104Y91        LUT4 (Prop_lut4_I3_O)        0.328     3.775 r  AVG/i___0_carry_i_6/O
+                         net (fo=1, routed)           0.000     3.775    AVG/i___0_carry_i_6_n_0
+    SLICE_X104Y91        CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230     4.005 r  AVG/avg_out0_inferred__0/i___0_carry/O[1]
+                         net (fo=2, routed)           0.750     4.755    AVG/avg_out04_out[1]
+    SLICE_X101Y90        LUT3 (Prop_lut3_I1_O)        0.332     5.087 r  AVG/i___0_carry_i_2__0/O
+                         net (fo=2, routed)           0.860     5.947    AVG/i___0_carry_i_2__0_n_0
+    SLICE_X101Y90        LUT4 (Prop_lut4_I3_O)        0.332     6.279 r  AVG/i___0_carry_i_5__0/O
+                         net (fo=1, routed)           0.000     6.279    AVG/i___0_carry_i_5__0_n_0
+    SLICE_X101Y90        CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.248     6.527 r  AVG/avg_out0_inferred__1/i___0_carry/O[2]
+                         net (fo=2, routed)           0.609     7.137    AVG/avg_out0_inferred__1/i___0_carry_n_5
+    SLICE_X102Y90        LUT3 (Prop_lut3_I0_O)        0.331     7.468 r  AVG/i___22_carry_i_1/O
+                         net (fo=2, routed)           0.679     8.147    AVG/i___22_carry_i_1_n_0
+    SLICE_X102Y90        LUT4 (Prop_lut4_I3_O)        0.331     8.478 r  AVG/i___22_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.478    AVG/i___22_carry_i_4_n_0
+    SLICE_X102Y90        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.255     8.733 r  AVG/avg_out0_inferred__1/i___22_carry/O[3]
+                         net (fo=3, routed)           0.867     9.600    AVG/avg_out02_out[3]
+    SLICE_X106Y86        LUT3 (Prop_lut3_I1_O)        0.332     9.932 r  AVG/i___0_carry__0_i_3__1/O
+                         net (fo=2, routed)           0.601    10.533    AVG/i___0_carry__0_i_3__1_n_0
+    SLICE_X106Y87        LUT4 (Prop_lut4_I3_O)        0.332    10.865 r  AVG/i___0_carry__0_i_7__1/O
+                         net (fo=1, routed)           0.000    10.865    AVG/i___0_carry__0_i_7__1_n_0
+    SLICE_X106Y87        CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    11.112 r  AVG/avg_out0_inferred__2/i___0_carry__0/O[0]
+                         net (fo=2, routed)           0.959    12.070    AVG/avg_out0_inferred__2/i___0_carry__0_n_7
+    SLICE_X108Y87        LUT3 (Prop_lut3_I1_O)        0.325    12.395 r  AVG/i___66_carry__0_i_2/O
+                         net (fo=2, routed)           0.490    12.885    AVG/i___66_carry__0_i_2_n_0
+    SLICE_X108Y87        LUT4 (Prop_lut4_I3_O)        0.328    13.213 r  AVG/i___66_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    13.213    AVG/i___66_carry__0_i_6_n_0
+    SLICE_X108Y87        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643    13.856 r  AVG/avg_out0_inferred__2/i___66_carry__0/O[3]
+                         net (fo=1, routed)           0.941    14.797    AVG/avg_out0[7]
+    SLICE_X108Y90        LUT5 (Prop_lut5_I2_O)        0.307    15.104 r  AVG/pwm_out0_carry_i_33/O
+                         net (fo=2, routed)           0.996    16.100    AVG/pwm_out0_carry_i_33_n_0
+    SLICE_X108Y92        LUT5 (Prop_lut5_I4_O)        0.124    16.224 r  AVG/pwm_out0_carry_i_14/O
+                         net (fo=1, routed)           0.820    17.044    PWM1/pwm_out0_carry_11
+    SLICE_X108Y91        LUT4 (Prop_lut4_I3_O)        0.152    17.196 r  PWM1/pwm_out0_carry_i_3__0/O
+                         net (fo=1, routed)           0.000    17.196    PWM2/pwm_out2[1]
+    SLICE_X108Y91        CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.454    17.650 r  PWM2/pwm_out0_carry/CO[3]
+                         net (fo=1, routed)           7.035    24.685    pwm_out2_OBUF
+    AA11                 OBUF (Prop_obuf_I_O)         3.614    28.299 r  pwm_out2_OBUF_inst/O
+                         net (fo=0)                   0.000    28.299    pwm_out2
     AA11                                                              r  pwm_out2 (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Sine_wave/Control/counter_control_reg[0]/C
-                            (rising edge-triggered cell FDRE)
+  Source:                 wave_sel1
+                            (input port)
   Destination:            pwm_out
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        14.692ns  (logic 4.979ns (33.891%)  route 9.712ns (66.109%))
-  Logic Levels:           5  (CARRY4=1 FDRE=1 LUT4=1 LUT5=1 OBUF=1)
+  Data Path Delay:        16.304ns  (logic 5.547ns (34.026%)  route 10.756ns (65.974%))
+  Logic Levels:           5  (CARRY4=1 IBUF=1 LUT4=1 LUT6=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X112Y106       FDRE                         0.000     0.000 r  Sine_wave/Control/counter_control_reg[0]/C
-    SLICE_X112Y106       FDRE (Prop_fdre_C_Q)         0.518     0.518 r  Sine_wave/Control/counter_control_reg[0]/Q
-                         net (fo=13, routed)          0.894     1.412    Sine_wave/Control/counter_control_reg[0]
-    SLICE_X112Y106       LUT5 (Prop_lut5_I0_O)        0.153     1.565 r  Sine_wave/Control/g0_b6/O
-                         net (fo=3, routed)           1.257     2.823    Sine_wave/Control/out[6]
-    SLICE_X112Y108       LUT4 (Prop_lut4_I0_O)        0.331     3.154 r  Sine_wave/Control/pwm_out0_carry_i_5/O
-                         net (fo=1, routed)           0.000     3.154    PWM1/S[3]
-    SLICE_X112Y108       CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     3.530 r  PWM1/pwm_out0_carry/CO[3]
-                         net (fo=1, routed)           7.561    11.090    pwm_out_OBUF
-    Y11                  OBUF (Prop_obuf_I_O)         3.601    14.692 r  pwm_out_OBUF_inst/O
-                         net (fo=0)                   0.000    14.692    pwm_out
+    R18                                               0.000     0.000 r  wave_sel1 (IN)
+                         net (fo=0)                   0.000     0.000    wave_sel1
+    R18                  IBUF (Prop_ibuf_I_O)         0.944     0.944 r  wave_sel1_IBUF_inst/O
+                         net (fo=14, routed)          2.048     2.993    wave_gen/Control/wave_sel1_IBUF
+    SLICE_X110Y89        LUT4 (Prop_lut4_I2_O)        0.150     3.143 r  wave_gen/Control/pwm_out0_carry_i_9/O
+                         net (fo=4, routed)           1.137     4.279    wave_gen/Control/pwm_out0_carry_i_9_n_0
+    SLICE_X110Y90        LUT6 (Prop_lut6_I3_O)        0.326     4.605 r  wave_gen/Control/pwm_out0_carry_i_4/O
+                         net (fo=1, routed)           0.617     5.222    PWM1/DI[0]
+    SLICE_X109Y90        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     5.748 r  PWM1/pwm_out0_carry/CO[3]
+                         net (fo=1, routed)           6.954    12.703    pwm_out_OBUF
+    Y11                  OBUF (Prop_obuf_I_O)         3.601    16.304 r  pwm_out_OBUF_inst/O
+                         net (fo=0)                   0.000    16.304    pwm_out
     Y11                                                               r  pwm_out (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            AVG/sr_reg[0][1]/CLR
+  Source:                 wave_gen/Control/counter_divider_latch_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            wave_gen/Control/counter_control_reg[4]/CE
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.037ns  (logic 0.933ns (15.456%)  route 5.104ns (84.544%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.911ns  (logic 1.955ns (28.287%)  route 4.956ns (71.713%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT1=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=143, routed)         5.104     6.037    AVG/AR[0]
-    SLICE_X107Y109       FDCE                                         f  AVG/sr_reg[0][1]/CLR
+    SLICE_X112Y101       FDCE                         0.000     0.000 r  wave_gen/Control/counter_divider_latch_reg[2]/C
+    SLICE_X112Y101       FDCE (Prop_fdce_C_Q)         0.518     0.518 f  wave_gen/Control/counter_divider_latch_reg[2]/Q
+                         net (fo=2, routed)           0.809     1.327    wave_gen/Control/counter_divider_latch[2]
+    SLICE_X111Y101       LUT1 (Prop_lut1_I0_O)        0.124     1.451 r  wave_gen/Control/clkdiv1_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.451    wave_gen/Control/clkdiv1_carry_i_2_n_0
+    SLICE_X111Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.001 r  wave_gen/Control/clkdiv1_carry/CO[3]
+                         net (fo=12, routed)          1.341     3.342    wave_gen/Control/clkdiv1_carry_n_0
+    SLICE_X111Y99        LUT3 (Prop_lut3_I2_O)        0.124     3.466 r  wave_gen/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     3.466    wave_gen/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     3.867 r  wave_gen/Control/clkdiv0_carry/CO[3]
+                         net (fo=1, routed)           0.001     3.868    wave_gen/Control/clkdiv0_carry_n_0
+    SLICE_X111Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.982 r  wave_gen/Control/clkdiv0_carry__0/CO[3]
+                         net (fo=6, routed)           0.920     4.902    wave_gen/Control/clkdiv0_carry__0_n_0
+    SLICE_X112Y101       LUT2 (Prop_lut2_I0_O)        0.124     5.026 r  wave_gen/Control/counter_divider[0]_i_1/O
+                         net (fo=21, routed)          1.885     6.911    wave_gen/Control/counter_divider0
+    SLICE_X110Y92        FDRE                                         r  wave_gen/Control/counter_control_reg[4]/CE
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            AVG/sr_reg[4][1]/CLR
+  Source:                 wave_gen/Control/counter_divider_latch_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            wave_gen/Control/counter_control_reg[0]/CE
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.037ns  (logic 0.933ns (15.456%)  route 5.104ns (84.544%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.722ns  (logic 1.955ns (29.083%)  route 4.767ns (70.917%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT1=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=143, routed)         5.104     6.037    AVG/AR[0]
-    SLICE_X107Y109       FDCE                                         f  AVG/sr_reg[4][1]/CLR
+    SLICE_X112Y101       FDCE                         0.000     0.000 r  wave_gen/Control/counter_divider_latch_reg[2]/C
+    SLICE_X112Y101       FDCE (Prop_fdce_C_Q)         0.518     0.518 f  wave_gen/Control/counter_divider_latch_reg[2]/Q
+                         net (fo=2, routed)           0.809     1.327    wave_gen/Control/counter_divider_latch[2]
+    SLICE_X111Y101       LUT1 (Prop_lut1_I0_O)        0.124     1.451 r  wave_gen/Control/clkdiv1_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.451    wave_gen/Control/clkdiv1_carry_i_2_n_0
+    SLICE_X111Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.001 r  wave_gen/Control/clkdiv1_carry/CO[3]
+                         net (fo=12, routed)          1.341     3.342    wave_gen/Control/clkdiv1_carry_n_0
+    SLICE_X111Y99        LUT3 (Prop_lut3_I2_O)        0.124     3.466 r  wave_gen/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     3.466    wave_gen/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     3.867 r  wave_gen/Control/clkdiv0_carry/CO[3]
+                         net (fo=1, routed)           0.001     3.868    wave_gen/Control/clkdiv0_carry_n_0
+    SLICE_X111Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.982 r  wave_gen/Control/clkdiv0_carry__0/CO[3]
+                         net (fo=6, routed)           0.920     4.902    wave_gen/Control/clkdiv0_carry__0_n_0
+    SLICE_X112Y101       LUT2 (Prop_lut2_I0_O)        0.124     5.026 r  wave_gen/Control/counter_divider[0]_i_1/O
+                         net (fo=21, routed)          1.696     6.722    wave_gen/Control/counter_divider0
+    SLICE_X111Y92        FDRE                                         r  wave_gen/Control/counter_control_reg[0]/CE
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            AVG/sr_reg[5][1]/CLR
+  Source:                 wave_gen/Control/counter_divider_latch_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            wave_gen/Control/counter_control_reg[1]/CE
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.037ns  (logic 0.933ns (15.456%)  route 5.104ns (84.544%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.722ns  (logic 1.955ns (29.083%)  route 4.767ns (70.917%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT1=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=143, routed)         5.104     6.037    AVG/AR[0]
-    SLICE_X107Y109       FDCE                                         f  AVG/sr_reg[5][1]/CLR
+    SLICE_X112Y101       FDCE                         0.000     0.000 r  wave_gen/Control/counter_divider_latch_reg[2]/C
+    SLICE_X112Y101       FDCE (Prop_fdce_C_Q)         0.518     0.518 f  wave_gen/Control/counter_divider_latch_reg[2]/Q
+                         net (fo=2, routed)           0.809     1.327    wave_gen/Control/counter_divider_latch[2]
+    SLICE_X111Y101       LUT1 (Prop_lut1_I0_O)        0.124     1.451 r  wave_gen/Control/clkdiv1_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.451    wave_gen/Control/clkdiv1_carry_i_2_n_0
+    SLICE_X111Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.001 r  wave_gen/Control/clkdiv1_carry/CO[3]
+                         net (fo=12, routed)          1.341     3.342    wave_gen/Control/clkdiv1_carry_n_0
+    SLICE_X111Y99        LUT3 (Prop_lut3_I2_O)        0.124     3.466 r  wave_gen/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     3.466    wave_gen/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     3.867 r  wave_gen/Control/clkdiv0_carry/CO[3]
+                         net (fo=1, routed)           0.001     3.868    wave_gen/Control/clkdiv0_carry_n_0
+    SLICE_X111Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.982 r  wave_gen/Control/clkdiv0_carry__0/CO[3]
+                         net (fo=6, routed)           0.920     4.902    wave_gen/Control/clkdiv0_carry__0_n_0
+    SLICE_X112Y101       LUT2 (Prop_lut2_I0_O)        0.124     5.026 r  wave_gen/Control/counter_divider[0]_i_1/O
+                         net (fo=21, routed)          1.696     6.722    wave_gen/Control/counter_divider0
+    SLICE_X111Y92        FDRE                                         r  wave_gen/Control/counter_control_reg[1]/CE
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            AVG/sr_reg[10][3]/CLR
+  Source:                 wave_gen/Control/counter_divider_latch_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            wave_gen/Control/counter_control_reg[2]/CE
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.913ns  (logic 0.933ns (15.780%)  route 4.980ns (84.220%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.722ns  (logic 1.955ns (29.083%)  route 4.767ns (70.917%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT1=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=143, routed)         4.980     5.913    AVG/AR[0]
-    SLICE_X106Y111       FDCE                                         f  AVG/sr_reg[10][3]/CLR
+    SLICE_X112Y101       FDCE                         0.000     0.000 r  wave_gen/Control/counter_divider_latch_reg[2]/C
+    SLICE_X112Y101       FDCE (Prop_fdce_C_Q)         0.518     0.518 f  wave_gen/Control/counter_divider_latch_reg[2]/Q
+                         net (fo=2, routed)           0.809     1.327    wave_gen/Control/counter_divider_latch[2]
+    SLICE_X111Y101       LUT1 (Prop_lut1_I0_O)        0.124     1.451 r  wave_gen/Control/clkdiv1_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.451    wave_gen/Control/clkdiv1_carry_i_2_n_0
+    SLICE_X111Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.001 r  wave_gen/Control/clkdiv1_carry/CO[3]
+                         net (fo=12, routed)          1.341     3.342    wave_gen/Control/clkdiv1_carry_n_0
+    SLICE_X111Y99        LUT3 (Prop_lut3_I2_O)        0.124     3.466 r  wave_gen/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     3.466    wave_gen/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     3.867 r  wave_gen/Control/clkdiv0_carry/CO[3]
+                         net (fo=1, routed)           0.001     3.868    wave_gen/Control/clkdiv0_carry_n_0
+    SLICE_X111Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.982 r  wave_gen/Control/clkdiv0_carry__0/CO[3]
+                         net (fo=6, routed)           0.920     4.902    wave_gen/Control/clkdiv0_carry__0_n_0
+    SLICE_X112Y101       LUT2 (Prop_lut2_I0_O)        0.124     5.026 r  wave_gen/Control/counter_divider[0]_i_1/O
+                         net (fo=21, routed)          1.696     6.722    wave_gen/Control/counter_divider0
+    SLICE_X111Y92        FDRE                                         r  wave_gen/Control/counter_control_reg[2]/CE
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            AVG/sr_reg[11][3]/CLR
+  Source:                 wave_gen/Control/counter_divider_latch_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            wave_gen/Control/counter_control_reg[3]/CE
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.913ns  (logic 0.933ns (15.780%)  route 4.980ns (84.220%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.722ns  (logic 1.955ns (29.083%)  route 4.767ns (70.917%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT1=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=143, routed)         4.980     5.913    AVG/AR[0]
-    SLICE_X106Y111       FDCE                                         f  AVG/sr_reg[11][3]/CLR
+    SLICE_X112Y101       FDCE                         0.000     0.000 r  wave_gen/Control/counter_divider_latch_reg[2]/C
+    SLICE_X112Y101       FDCE (Prop_fdce_C_Q)         0.518     0.518 f  wave_gen/Control/counter_divider_latch_reg[2]/Q
+                         net (fo=2, routed)           0.809     1.327    wave_gen/Control/counter_divider_latch[2]
+    SLICE_X111Y101       LUT1 (Prop_lut1_I0_O)        0.124     1.451 r  wave_gen/Control/clkdiv1_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.451    wave_gen/Control/clkdiv1_carry_i_2_n_0
+    SLICE_X111Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.001 r  wave_gen/Control/clkdiv1_carry/CO[3]
+                         net (fo=12, routed)          1.341     3.342    wave_gen/Control/clkdiv1_carry_n_0
+    SLICE_X111Y99        LUT3 (Prop_lut3_I2_O)        0.124     3.466 r  wave_gen/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     3.466    wave_gen/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     3.867 r  wave_gen/Control/clkdiv0_carry/CO[3]
+                         net (fo=1, routed)           0.001     3.868    wave_gen/Control/clkdiv0_carry_n_0
+    SLICE_X111Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.982 r  wave_gen/Control/clkdiv0_carry__0/CO[3]
+                         net (fo=6, routed)           0.920     4.902    wave_gen/Control/clkdiv0_carry__0_n_0
+    SLICE_X112Y101       LUT2 (Prop_lut2_I0_O)        0.124     5.026 r  wave_gen/Control/counter_divider[0]_i_1/O
+                         net (fo=21, routed)          1.696     6.722    wave_gen/Control/counter_divider0
+    SLICE_X111Y92        FDRE                                         r  wave_gen/Control/counter_control_reg[3]/CE
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            AVG/sr_reg[12][3]/CLR
+  Source:                 wave_gen/Control/counter_divider_latch_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            wave_gen/Control/counter_divider_reg[0]/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.913ns  (logic 0.933ns (15.780%)  route 4.980ns (84.220%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.648ns  (logic 1.955ns (29.407%)  route 4.693ns (70.593%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT1=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=143, routed)         4.980     5.913    AVG/AR[0]
-    SLICE_X106Y111       FDCE                                         f  AVG/sr_reg[12][3]/CLR
+    SLICE_X112Y101       FDCE                         0.000     0.000 r  wave_gen/Control/counter_divider_latch_reg[2]/C
+    SLICE_X112Y101       FDCE (Prop_fdce_C_Q)         0.518     0.518 f  wave_gen/Control/counter_divider_latch_reg[2]/Q
+                         net (fo=2, routed)           0.809     1.327    wave_gen/Control/counter_divider_latch[2]
+    SLICE_X111Y101       LUT1 (Prop_lut1_I0_O)        0.124     1.451 r  wave_gen/Control/clkdiv1_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.451    wave_gen/Control/clkdiv1_carry_i_2_n_0
+    SLICE_X111Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.001 r  wave_gen/Control/clkdiv1_carry/CO[3]
+                         net (fo=12, routed)          1.341     3.342    wave_gen/Control/clkdiv1_carry_n_0
+    SLICE_X111Y99        LUT3 (Prop_lut3_I2_O)        0.124     3.466 r  wave_gen/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     3.466    wave_gen/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     3.867 r  wave_gen/Control/clkdiv0_carry/CO[3]
+                         net (fo=1, routed)           0.001     3.868    wave_gen/Control/clkdiv0_carry_n_0
+    SLICE_X111Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.982 r  wave_gen/Control/clkdiv0_carry__0/CO[3]
+                         net (fo=6, routed)           0.920     4.902    wave_gen/Control/clkdiv0_carry__0_n_0
+    SLICE_X112Y101       LUT2 (Prop_lut2_I0_O)        0.124     5.026 r  wave_gen/Control/counter_divider[0]_i_1/O
+                         net (fo=21, routed)          1.622     6.648    wave_gen/Control/counter_divider0
+    SLICE_X110Y98        FDRE                                         r  wave_gen/Control/counter_divider_reg[0]/R
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            AVG/sr_reg[13][1]/CLR
+  Source:                 wave_gen/Control/counter_divider_latch_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            wave_gen/Control/counter_divider_reg[1]/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.913ns  (logic 0.933ns (15.780%)  route 4.980ns (84.220%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.648ns  (logic 1.955ns (29.407%)  route 4.693ns (70.593%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT1=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=143, routed)         4.980     5.913    AVG/AR[0]
-    SLICE_X106Y111       FDCE                                         f  AVG/sr_reg[13][1]/CLR
+    SLICE_X112Y101       FDCE                         0.000     0.000 r  wave_gen/Control/counter_divider_latch_reg[2]/C
+    SLICE_X112Y101       FDCE (Prop_fdce_C_Q)         0.518     0.518 f  wave_gen/Control/counter_divider_latch_reg[2]/Q
+                         net (fo=2, routed)           0.809     1.327    wave_gen/Control/counter_divider_latch[2]
+    SLICE_X111Y101       LUT1 (Prop_lut1_I0_O)        0.124     1.451 r  wave_gen/Control/clkdiv1_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.451    wave_gen/Control/clkdiv1_carry_i_2_n_0
+    SLICE_X111Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.001 r  wave_gen/Control/clkdiv1_carry/CO[3]
+                         net (fo=12, routed)          1.341     3.342    wave_gen/Control/clkdiv1_carry_n_0
+    SLICE_X111Y99        LUT3 (Prop_lut3_I2_O)        0.124     3.466 r  wave_gen/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     3.466    wave_gen/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     3.867 r  wave_gen/Control/clkdiv0_carry/CO[3]
+                         net (fo=1, routed)           0.001     3.868    wave_gen/Control/clkdiv0_carry_n_0
+    SLICE_X111Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.982 r  wave_gen/Control/clkdiv0_carry__0/CO[3]
+                         net (fo=6, routed)           0.920     4.902    wave_gen/Control/clkdiv0_carry__0_n_0
+    SLICE_X112Y101       LUT2 (Prop_lut2_I0_O)        0.124     5.026 r  wave_gen/Control/counter_divider[0]_i_1/O
+                         net (fo=21, routed)          1.622     6.648    wave_gen/Control/counter_divider0
+    SLICE_X110Y98        FDRE                                         r  wave_gen/Control/counter_divider_reg[1]/R
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            AVG/sr_reg[13][3]/CLR
+  Source:                 wave_gen/Control/counter_divider_latch_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            wave_gen/Control/counter_divider_reg[2]/R
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.913ns  (logic 0.933ns (15.780%)  route 4.980ns (84.220%))
-  Logic Levels:           1  (IBUF=1)
+  Data Path Delay:        6.648ns  (logic 1.955ns (29.407%)  route 4.693ns (70.593%))
+  Logic Levels:           7  (CARRY4=3 FDCE=1 LUT1=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    P16                                               0.000     0.000 f  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    P16                  IBUF (Prop_ibuf_I_O)         0.933     0.933 f  reset_IBUF_inst/O
-                         net (fo=143, routed)         4.980     5.913    AVG/AR[0]
-    SLICE_X106Y111       FDCE                                         f  AVG/sr_reg[13][3]/CLR
+    SLICE_X112Y101       FDCE                         0.000     0.000 r  wave_gen/Control/counter_divider_latch_reg[2]/C
+    SLICE_X112Y101       FDCE (Prop_fdce_C_Q)         0.518     0.518 f  wave_gen/Control/counter_divider_latch_reg[2]/Q
+                         net (fo=2, routed)           0.809     1.327    wave_gen/Control/counter_divider_latch[2]
+    SLICE_X111Y101       LUT1 (Prop_lut1_I0_O)        0.124     1.451 r  wave_gen/Control/clkdiv1_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.451    wave_gen/Control/clkdiv1_carry_i_2_n_0
+    SLICE_X111Y101       CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.001 r  wave_gen/Control/clkdiv1_carry/CO[3]
+                         net (fo=12, routed)          1.341     3.342    wave_gen/Control/clkdiv1_carry_n_0
+    SLICE_X111Y99        LUT3 (Prop_lut3_I2_O)        0.124     3.466 r  wave_gen/Control/clkdiv0_carry_i_5/O
+                         net (fo=1, routed)           0.000     3.466    wave_gen/Control/clkdiv0_carry_i_5_n_0
+    SLICE_X111Y99        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     3.867 r  wave_gen/Control/clkdiv0_carry/CO[3]
+                         net (fo=1, routed)           0.001     3.868    wave_gen/Control/clkdiv0_carry_n_0
+    SLICE_X111Y100       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.982 r  wave_gen/Control/clkdiv0_carry__0/CO[3]
+                         net (fo=6, routed)           0.920     4.902    wave_gen/Control/clkdiv0_carry__0_n_0
+    SLICE_X112Y101       LUT2 (Prop_lut2_I0_O)        0.124     5.026 r  wave_gen/Control/counter_divider[0]_i_1/O
+                         net (fo=21, routed)          1.622     6.648    wave_gen/Control/counter_divider0
+    SLICE_X110Y98        FDRE                                         r  wave_gen/Control/counter_divider_reg[2]/R
   -------------------------------------------------------------------    -------------------
 
 
@@ -465,173 +578,173 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
+  Source:                 AVG/sr_reg[12][0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            AVG/sr_reg[13][0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X109Y82        FDCE                         0.000     0.000 r  AVG/sr_reg[12][0]/C
+    SLICE_X109Y82        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[12][0]/Q
+                         net (fo=3, routed)           0.056     0.197    AVG/sr_reg[12][0]
+    SLICE_X109Y82        FDCE                                         r  AVG/sr_reg[13][0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AVG/sr_reg[9][3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            AVG/sr_reg[10][3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.197ns  (logic 0.128ns (64.926%)  route 0.069ns (35.074%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y86        FDCE                         0.000     0.000 r  AVG/sr_reg[9][3]/C
+    SLICE_X111Y86        FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[9][3]/Q
+                         net (fo=3, routed)           0.069     0.197    AVG/sr_reg[9][3]
+    SLICE_X111Y86        FDCE                                         r  AVG/sr_reg[10][3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 AVG/sr_reg[9][0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            AVG/sr_reg[10][0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.198ns  (logic 0.128ns (64.569%)  route 0.070ns (35.431%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y86        FDCE                         0.000     0.000 r  AVG/sr_reg[9][0]/C
+    SLICE_X111Y86        FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[9][0]/Q
+                         net (fo=3, routed)           0.070     0.198    AVG/sr_reg[9][0]
+    SLICE_X111Y86        FDCE                                         r  AVG/sr_reg[10][0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
   Source:                 AVG/sr_reg[9][4]/C
                             (rising edge-triggered cell FDCE)
   Destination:            AVG/sr_reg[10][4]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.198ns  (logic 0.128ns (64.596%)  route 0.070ns (35.404%))
+  Data Path Delay:        0.198ns  (logic 0.128ns (64.569%)  route 0.070ns (35.431%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X109Y114       FDCE                         0.000     0.000 r  AVG/sr_reg[9][4]/C
-    SLICE_X109Y114       FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[9][4]/Q
+    SLICE_X111Y87        FDCE                         0.000     0.000 r  AVG/sr_reg[9][4]/C
+    SLICE_X111Y87        FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[9][4]/Q
                          net (fo=3, routed)           0.070     0.198    AVG/sr_reg[9][4]
-    SLICE_X109Y114       FDCE                                         r  AVG/sr_reg[10][4]/D
+    SLICE_X111Y87        FDCE                                         r  AVG/sr_reg[10][4]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 AVG/sr_reg[14][2]/C
+  Source:                 AVG/sr_reg[9][7]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            AVG/sr_reg[15][2]/D
+  Destination:            AVG/sr_reg[10][7]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.242ns  (logic 0.128ns (52.968%)  route 0.114ns (47.032%))
+  Data Path Delay:        0.199ns  (logic 0.128ns (64.383%)  route 0.071ns (35.617%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X107Y110       FDCE                         0.000     0.000 r  AVG/sr_reg[14][2]/C
-    SLICE_X107Y110       FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[14][2]/Q
-                         net (fo=3, routed)           0.114     0.242    AVG/sr_reg[14][2]
-    SLICE_X108Y110       FDCE                                         r  AVG/sr_reg[15][2]/D
+    SLICE_X111Y87        FDCE                         0.000     0.000 r  AVG/sr_reg[9][7]/C
+    SLICE_X111Y87        FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[9][7]/Q
+                         net (fo=2, routed)           0.071     0.199    AVG/sr_reg[9][7]
+    SLICE_X111Y87        FDCE                                         r  AVG/sr_reg[10][7]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 AVG/sr_reg[4][0]/C
+  Source:                 AVG/sr_reg[12][1]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            AVG/sr_reg[5][0]/D
+  Destination:            AVG/sr_reg[13][1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.254ns  (logic 0.141ns (55.429%)  route 0.113ns (44.571%))
+  Data Path Delay:        0.208ns  (logic 0.141ns (67.788%)  route 0.067ns (32.212%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X109Y109       FDCE                         0.000     0.000 r  AVG/sr_reg[4][0]/C
-    SLICE_X109Y109       FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[4][0]/Q
-                         net (fo=3, routed)           0.113     0.254    AVG/sr_reg[4][0]
-    SLICE_X106Y110       FDCE                                         r  AVG/sr_reg[5][0]/D
+    SLICE_X109Y82        FDCE                         0.000     0.000 r  AVG/sr_reg[12][1]/C
+    SLICE_X109Y82        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[12][1]/Q
+                         net (fo=3, routed)           0.067     0.208    AVG/sr_reg[12][1]
+    SLICE_X109Y82        FDCE                                         r  AVG/sr_reg[13][1]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 AVG/sr_reg[10][2]/C
+  Source:                 AVG/sr_reg[12][2]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            AVG/sr_reg[11][2]/D
+  Destination:            AVG/sr_reg[13][2]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.255ns  (logic 0.141ns (55.284%)  route 0.114ns (44.716%))
+  Data Path Delay:        0.208ns  (logic 0.141ns (67.788%)  route 0.067ns (32.212%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X107Y110       FDCE                         0.000     0.000 r  AVG/sr_reg[10][2]/C
-    SLICE_X107Y110       FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[10][2]/Q
-                         net (fo=3, routed)           0.114     0.255    AVG/sr_reg[10][2]
-    SLICE_X107Y110       FDCE                                         r  AVG/sr_reg[11][2]/D
+    SLICE_X109Y82        FDCE                         0.000     0.000 r  AVG/sr_reg[12][2]/C
+    SLICE_X109Y82        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[12][2]/Q
+                         net (fo=3, routed)           0.067     0.208    AVG/sr_reg[12][2]
+    SLICE_X109Y82        FDCE                                         r  AVG/sr_reg[13][2]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 AVG/sr_reg[1][7]/C
+  Source:                 AVG/sr_reg[12][3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            AVG/sr_reg[2][7]/D
+  Destination:            AVG/sr_reg[13][3]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.257ns  (logic 0.141ns (54.798%)  route 0.116ns (45.202%))
+  Data Path Delay:        0.208ns  (logic 0.141ns (67.788%)  route 0.067ns (32.212%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X111Y112       FDCE                         0.000     0.000 r  AVG/sr_reg[1][7]/C
-    SLICE_X111Y112       FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[1][7]/Q
-                         net (fo=2, routed)           0.116     0.257    AVG/sr_reg[1][7]
-    SLICE_X111Y112       FDCE                                         r  AVG/sr_reg[2][7]/D
+    SLICE_X109Y82        FDCE                         0.000     0.000 r  AVG/sr_reg[12][3]/C
+    SLICE_X109Y82        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[12][3]/Q
+                         net (fo=3, routed)           0.067     0.208    AVG/sr_reg[12][3]
+    SLICE_X109Y82        FDCE                                         r  AVG/sr_reg[13][3]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 AVG/sr_reg[2][2]/C
+  Source:                 AVG/sr_reg[3][2]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            AVG/sr_reg[3][2]/D
+  Destination:            AVG/sr_reg[4][2]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.257ns  (logic 0.141ns (54.798%)  route 0.116ns (45.202%))
+  Data Path Delay:        0.254ns  (logic 0.141ns (55.547%)  route 0.113ns (44.453%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X111Y109       FDCE                         0.000     0.000 r  AVG/sr_reg[2][2]/C
-    SLICE_X111Y109       FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[2][2]/Q
-                         net (fo=3, routed)           0.116     0.257    AVG/sr_reg[2][2]
-    SLICE_X111Y109       FDCE                                         r  AVG/sr_reg[3][2]/D
+    SLICE_X99Y93         FDCE                         0.000     0.000 r  AVG/sr_reg[3][2]/C
+    SLICE_X99Y93         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[3][2]/Q
+                         net (fo=13, routed)          0.113     0.254    AVG/sr_reg_n_0_[3][2]
+    SLICE_X98Y93         FDCE                                         r  AVG/sr_reg[4][2]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 AVG/sr_reg[5][2]/C
+  Source:                 AVG/sr_reg[11][3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            AVG/sr_reg[6][2]/D
+  Destination:            AVG/sr_reg[12][3]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.263ns  (logic 0.128ns (48.640%)  route 0.135ns (51.360%))
+  Data Path Delay:        0.259ns  (logic 0.141ns (54.376%)  route 0.118ns (45.624%))
   Logic Levels:           1  (FDCE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X111Y109       FDCE                         0.000     0.000 r  AVG/sr_reg[5][2]/C
-    SLICE_X111Y109       FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[5][2]/Q
-                         net (fo=3, routed)           0.135     0.263    AVG/sr_reg[5][2]
-    SLICE_X111Y109       FDCE                                         r  AVG/sr_reg[6][2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 AVG/sr_reg[5][7]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            AVG/sr_reg[6][7]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.263ns  (logic 0.128ns (48.640%)  route 0.135ns (51.360%))
-  Logic Levels:           1  (FDCE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X111Y112       FDCE                         0.000     0.000 r  AVG/sr_reg[5][7]/C
-    SLICE_X111Y112       FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[5][7]/Q
-                         net (fo=2, routed)           0.135     0.263    AVG/sr_reg[5][7]
-    SLICE_X111Y112       FDCE                                         r  AVG/sr_reg[6][7]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 AVG/sr_reg[6][2]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            AVG/sr_reg[7][2]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.263ns  (logic 0.128ns (48.591%)  route 0.135ns (51.409%))
-  Logic Levels:           1  (FDCE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X111Y109       FDCE                         0.000     0.000 r  AVG/sr_reg[6][2]/C
-    SLICE_X111Y109       FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[6][2]/Q
-                         net (fo=3, routed)           0.135     0.263    AVG/sr_reg[6][2]
-    SLICE_X111Y109       FDCE                                         r  AVG/sr_reg[7][2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 AVG/sr_reg[6][7]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            AVG/sr_reg[7][7]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.263ns  (logic 0.128ns (48.591%)  route 0.135ns (51.409%))
-  Logic Levels:           1  (FDCE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X111Y112       FDCE                         0.000     0.000 r  AVG/sr_reg[6][7]/C
-    SLICE_X111Y112       FDCE (Prop_fdce_C_Q)         0.128     0.128 r  AVG/sr_reg[6][7]/Q
-                         net (fo=2, routed)           0.135     0.263    AVG/sr_reg[6][7]
-    SLICE_X111Y112       FDCE                                         r  AVG/sr_reg[7][7]/D
+    SLICE_X109Y83        FDCE                         0.000     0.000 r  AVG/sr_reg[11][3]/C
+    SLICE_X109Y83        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  AVG/sr_reg[11][3]/Q
+                         net (fo=3, routed)           0.118     0.259    AVG/sr_reg[11][3]
+    SLICE_X109Y82        FDCE                                         r  AVG/sr_reg[12][3]/D
   -------------------------------------------------------------------    -------------------
 
 

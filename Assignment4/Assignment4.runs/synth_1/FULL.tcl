@@ -57,6 +57,8 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
+set_param chipscope.maxJobs 5
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -75,7 +77,9 @@ read_vhdl -library xil_defaultlib {
   {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/dip_sw.vhd}
   {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/control.vhd}
   {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/ROM.vhd}
-  {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/sine_wave.vhd}
+  {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/ROM_square.vhd}
+  {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/ROM_triangle.vhd}
+  {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/wave_gen.vhd}
   {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/avg.vhd}
   {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/PWM.vhd}
   {C:/Users/liubo/Documents/GitHub projects/DDSP/Assignment4/Assignment4.srcs/sources_1/new/FULL.vhd}

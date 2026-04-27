@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Fri Apr 24 13:32:52 2026
+| Date         : Mon Apr 27 16:15:07 2026
 | Host         : DESKTOP-QU8QVCL running 64-bit major release  (build 9200)
 | Command      : report_utilization -file FULL_utilization_synth.rpt -pb FULL_utilization_synth.pb
 | Design       : FULL
@@ -31,13 +31,13 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  131 |     0 |          0 |     53200 |  0.25 |
-|   LUT as Logic          |  131 |     0 |          0 |     53200 |  0.25 |
+| Slice LUTs*             |  462 |     0 |          0 |     53200 |  0.87 |
+|   LUT as Logic          |  462 |     0 |          0 |     53200 |  0.87 |
 |   LUT as Memory         |    0 |     0 |          0 |     17400 |  0.00 |
 | Slice Registers         |  170 |     0 |          0 |    106400 |  0.16 |
 |   Register as Flip Flop |  170 |     0 |          0 |    106400 |  0.16 |
 |   Register as Latch     |    0 |     0 |          0 |    106400 |  0.00 |
-| F7 Muxes                |    0 |     0 |          0 |     26600 |  0.00 |
+| F7 Muxes                |    2 |     0 |          0 |     26600 | <0.01 |
 | F8 Muxes                |    0 |     0 |          0 |     13300 |  0.00 |
 | Unique Control Sets     |    6 |       |          0 |     13300 |  0.05 |
 +-------------------------+------+-------+------------+-----------+-------+
@@ -95,7 +95,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   12 |     0 |          0 |       200 |  6.00 |
+| Bonded IOB                  |   14 |     0 |          0 |       200 |  7.00 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -151,17 +151,18 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| LUT2     |  249 |                 LUT |
 | FDCE     |  140 |        Flop & Latch |
-| LUT3     |   64 |                 LUT |
-| LUT4     |   62 |                 LUT |
-| LUT6     |   36 |                 LUT |
+| CARRY4   |  126 |          CarryLogic |
+| LUT3     |  108 |                 LUT |
+| LUT4     |   91 |                 LUT |
+| LUT5     |   48 |                 LUT |
+| LUT1     |   47 |                 LUT |
 | FDRE     |   29 |        Flop & Latch |
-| CARRY4   |   25 |          CarryLogic |
-| LUT5     |   19 |                 LUT |
-| LUT2     |   12 |                 LUT |
-| IBUF     |   10 |                  IO |
-| LUT1     |    7 |                 LUT |
+| LUT6     |   25 |                 LUT |
+| IBUF     |   12 |                  IO |
 | OBUF     |    2 |                  IO |
+| MUXF7    |    2 |               MuxFx |
 | FDPE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
