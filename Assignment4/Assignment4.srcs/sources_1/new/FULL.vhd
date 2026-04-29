@@ -53,7 +53,7 @@ begin
         port map (
             clk        => clk,
             reset      => reset,
-            sine_out   => sine_sample,
+            wave_out   => sine_sample,
             data_ready => data_ready,
             div_value  => switch_freq,
             wave_sel   => wave_sel

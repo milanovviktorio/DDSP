@@ -8,7 +8,7 @@ entity wave_gen is
         reset      : in  STD_LOGIC;
         div_value  : in  STD_LOGIC_VECTOR(3 downto 0);
         wave_sel   : in  STD_LOGIC_VECTOR(1 downto 0); -- 00=sine, 01=square, 10=triangle
-        sine_out   : out STD_LOGIC_VECTOR(7 downto 0);
+        wave_out   : out STD_LOGIC_VECTOR(7 downto 0);
         data_ready : out STD_LOGIC
     );
 end wave_gen;
@@ -58,10 +58,10 @@ begin
     process(wave_sel, sine_val, square_val, triangle_val)
     begin
         case wave_sel is
-            when "00"   => sine_out <= sine_val;
-            when "01"   => sine_out <= square_val;
-            when "10"   => sine_out <= triangle_val;
-            when others => sine_out <= sine_val;
+            when "00"   => wave_out <= sine_val;
+            when "01"   => wave_out <= square_val;
+            when "10"   => wave_out <= triangle_val;
+            when others => wave_out <= sine_val;
         end case;
     end process;
 
